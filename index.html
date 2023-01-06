@@ -79,6 +79,11 @@
   <div class="expandedImageBox" id="image38"><video controls="visible" src="img/v1 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image39"><video controls="visible" src="img/v2 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image40"><video controls="visible" src="img/v3 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image41"><img controls="visible" src="img/thorn1.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image42"><img controls="visible" src="img/thorn2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image43"><img controls="visible" src="img/thorn4.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image44"><img controls="visible" src="img/thorn3.png" class="expandedImage" loop></div>
+
 
   <!-- ------------------------------------------- ANATOMY AND FIGURE PAGE ------------------------------------------- -->
   <div class="openedPageBox">
@@ -390,6 +395,62 @@
     </div>
   </div>
 
+  <!-- ------------------------------------------- 3D RIGGING PAGE ------------------------------------------- -->
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun11">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">3D Rigging</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText">I am somewhat new to 3D rigging, but I've found that my prior experience with 2D rigging has been incredibly helpful in both
+          visualizing the things I need to create my model to do, and actually creating the model. For the fall 2022 project I did, I created the models for the 
+          main characters: 2 bipeds, and one octopus monster.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Bipedal Main Character</div>
+          <div class="pageInfoText">
+            I modeled and rigged the main character for the animation over the course of about one to two weeks. In that time, I sculpted, rigged and weighted, and created blend shape
+            expressions for myself and my teammates to use in animation. 
+          </div>
+          <div class="pageInfoText">
+            Some of the models features include: Eyes controlled with a driven key attatched to the UV maps of eye planes, IK spring solver legs, curve and cluster controlled tail, as 
+            well as structure for animating individual finger curl and ear movement. Despite the somewhat stubby appendages of the character, I was able to make the model capture a 
+            pretty wide range of motion.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/thorn1.png" class="pageImage" onclick="imageOpenHandler('image41')">
+          <img src="img/thorn2.png" class="pageImage" onclick="imageOpenHandler('image42')">
+          <img src="img/thorn4.png" class="pageImage" onclick="imageOpenHandler('image43')">
+          <img src="img/thorn3.png" class="pageImage" onclick="imageOpenHandler('image44')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/otter.jpg" class="pageImage" onclick="imageOpenHandler('image5')">
+          <img src="img/boxes.jpg" class="pageImage" onclick="imageOpenHandler('image6')">
+          <img src="img/fund11.jpg" class="pageImage" onclick="imageOpenHandler('image7')">
+          <img src="img/fund12.jpg" class="pageImage" onclick="imageOpenHandler('image8')">
+        </div>
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Monstrous Antagonist</div>
+          <div class="pageInfoText">
+            The antagonist of our movie was really where I had the most fun in creating a villain. Naturally, given our limited experience and even more limited amount of
+            time to put our plan together, I had to come up with a control scheme for a monster that would allow us to maximize his presence. What I came up with was a central 
+            body piece controlled by a curve, a set of three tentacles that would remain around him, and a theoretically infinite number of motion pathed tentacles that could be
+            aimed and placed wherever based on the position of the camera. 
+          </div>
+          <div class="pageInfoText">
+            Part of the model also included blend shapes for eyes and mouth open/close, as well as a high-emission plane located in the body to give him the contrasting black and white
+            appearance we wanted.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ------------------------------------------- Under Construction Page ------------------------------------------- -->
   <div class="openedPageBox">
     <div class="openedPage" id="Fun21">
@@ -615,7 +676,7 @@
         <p>Aa model controlled with facial expressions, composed of 100+ 2D image layers</p>
       </div>
     </div>
-    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+    <div class="filePocket" onclick="pageOpenHandler('Fun11')" id="FunPocket1">
       <div class="pocketText">
         <p class="pocketTitle">3D Model Rigging</p>
         <p>3D character rigs from a project I worked on Fall 2022</p>
