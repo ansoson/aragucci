@@ -73,6 +73,12 @@
   <div class="expandedImageBox" id="image32"><video controls="visible" src="img/aragucci_rocket.mp4" class="expandedImage" ></div>
   <div class="expandedImageBox" id="image33"><video controls="visible" src="img/aragucci_final_char.mp4" class="expandedImage" ></div>
   <div class="expandedImageBox" id="image34"><video controls="visible" src="img/walkcyclereal_1.0001.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image35"><img controls="visible" src="img/v1.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image36"><img controls="visible" src="img/v3.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37"><img controls="visible" src="img/v2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image38"><video controls="visible" src="img/v1 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image39"><video controls="visible" src="img/v2 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image40"><video controls="visible" src="img/v3 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
 
   <!-- ------------------------------------------- ANATOMY AND FIGURE PAGE ------------------------------------------- -->
   <div class="openedPageBox">
@@ -333,26 +339,52 @@
             As part of my development as a tech artist, I decided that after I think I had improved significantly, I would remake the first model I had ever made. Currently,
             there are three different versions, with the third one still in progress. These models are made up of anywhere from 40 to 100+ 2D image layers (that I've drawn), and rigged
             to deform based off of parameters that come from face tracking. Each of them use different systems of deformation to shape the body and face as the model moves, as I created a new version 
-            whenever I had the inspiration for new tech.
+            whenever I had the inspiration for new tech. While these models have full bodies, they are meant to be used from bust up, hence the lack of lower body movement. I could 
+            talk about these models for hours, but I've distilled most of the major changes in the descriptions below.
           </div>
         </div>
       </div>
       <div class="pageInfoBox">
         <div class="pageImageBox">
-          <img src="img/wood.jpg" class="pageImage3" onclick="imageOpenHandler('image12')">
-          <img src="img/glass.jpg" class="pageImage3" onclick="imageOpenHandler('image13')">
-          <img src="img/plastic.jpg" class="pageImage3" onclick="imageOpenHandler('image14')">
+          <img src="img/v1.png" class="pageImage3" onclick="imageOpenHandler('image35')">
+          <img src="img/v3.png" class="pageImage3" onclick="imageOpenHandler('image36')">
+          <img src="img/v2.png" class="pageImage3" onclick="imageOpenHandler('image37')">
         </div>
       </div>
       <div class="pageInfoBox">
         <div class="pageInfoTextContainer">
-          <div class="pageInfoTitle">Rendering</div>
+          <div class="pageInfoTitle">Version 1</div>
           <div class="pageInfoText">
-            Experience with Arnold rendering engine, as well as producing textures compatible with GPU rendering. 
+            With the initial version, I looked for understanding the software as a whole, and went with a pretty standard design that didn't involve much movement. The model
+            both deforms to moevemnet of the user, and uses pendulum physics to apply secondary motion to parts of the model's body.
           </div>
         </div>
         <div class="pageImageBox">
-          <video src="img/aragucci_shade_final.mp4" class="pageImage" onclick="imageOpenHandler('image17')">
+          <video src="img/v1 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image38')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 2</div>
+          <div class="pageInfoText">
+            With the second version, I looked to expand the range of motion of the character. Additional layers and image culling was used to change the shape of the head so 
+            drastically with large movement. In addition to that, controls for ear movement were attatched to eyebrow movement for ease of control.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <video src="img/v2 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image39')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 3 (in development)</div>
+          <div class="pageInfoText">
+            The current version is in development right now, with physics and other movement addons are currently being added. The entire facial system was restructured,
+            with image shapes and their outlines being separated in order to keep a more consistent outline and shape on turns and deformation.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <video src="img/v3 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image40')">
         </div>
       </div>
     </div>
@@ -575,7 +607,7 @@
        <p>This is where all of those previous experiences come together, and definitely where I get the most excited</p> 
       </div>
     </div>
-    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+    <div class="filePocket" onclick="pageOpenHandler('Fun10')" id="FunPocket1">
       <img class="pocketImage" src="img/2drig.png"> 
       <img class="pocketDivider" src="img/menuStar.png">
       <div class="pocketText">
