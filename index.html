@@ -80,6 +80,9 @@
   <div class="expandedImageBox" id="image35"><img controls="visible" src="img/v1.png" class="expandedImage" loop></div>
   <div class="expandedImageBox" id="image36"><img controls="visible" src="img/v3.png" class="expandedImage" loop></div>
   <div class="expandedImageBox" id="image37"><img controls="visible" src="img/v2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37.1"><img controls="visible" src="img/allThoseSliders.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37.2"><video controls="visible" src="img/physicsvid - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.3"><video controls="visible" src="img/toggles.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image38"><video controls="visible" src="img/v1 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image39"><video controls="visible" src="img/v2 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image40"><video controls="visible" src="img/v3 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
@@ -342,7 +345,7 @@
       <div class="pageInfoBox">
         <div class="pageInfoText"> My first introduction to rigging was actually something I wanted to try out for fun, creating a 2D model 
           that could be rigged to to express itself based on your input facial paramaters, commonly known as V-Tubing. Although I never really did anything
-          with the models I made, I kept iterating with all new versions as I simply enjoyed the creation process so much.
+          with the models I made, I kept iterating with all new versions as I simply enjoyed creating them.
         </div>
       </div>
       <div class="pageInfoBox">
@@ -377,7 +380,7 @@
             as there isn't actually any 3D depth to them. Making and rigging a model requires a lot of planning and design to make it right, and it was especially true in my case.
              as you'll see later, I ended up creating a lot of designs for the tech of my model from scratch.
           </div>
-          <div class="pageImageBox" style="width: 100%; margin-top: 3vh;">
+          <div class="pageImageBox" style="width: 92%; margin-top: 3vh;">
             <img src="img/thatsItGif.gif" class="pageImage2"  onclick="imageOpenHandler('image34.4')">
           </div>
         </div>
@@ -386,11 +389,9 @@
         <div class="pageInfoTextContainer">
           <div class="pageInfoTitle">Versions</div>
           <div class="pageInfoText">
-            As part of my development as a tech artist, I decided that after I think I had improved significantly, I would remake the first model I had ever made. Currently,
-            there are three different versions, with the third one still in progress. These models are made up of anywhere from 40 to 100+ 2D image layers (that I've drawn), and rigged
-            to deform based off of parameters that come from face tracking. Each of them use different systems of deformation to shape the body and face as the model moves, as I created a new version 
-            whenever I had the inspiration for new tech. While these models have full bodies, they are meant to be used from bust up, hence the lack of lower body movement. I could 
-            talk about these models for hours, but I've distilled most of the major changes in the descriptions below.
+            Almost as soon as I had finished my first model, I had thought a lot about different ways I could rig more depth, range, and expression into it. With those ideas in mind,
+            I ended up redesigning, redrawing, and rerigging whole new versions of my little raccoon friend (who would later be named Cray). Each shift in technology dubbed a new 
+            version for the model. The final versions of each model are below, at versions 3.2, 7.3, and (in progress) 8.1.
           </div>
         </div>
       </div>
@@ -401,16 +402,65 @@
           <img src="img/v2.png" class="pageImage3" onclick="imageOpenHandler('image37')">
         </div>
       </div>
+      <img class="titleDivider" src="img/menuStar.png">
       <div class="pageInfoBox">
         <div class="pageInfoTextContainer">
-          <div class="pageInfoTitle">Version 1</div>
+          <div class="pageInfoTitle">Version 3.2</div>
           <div class="pageInfoText">
-            With the initial version, I looked for understanding the software as a whole, and went with a pretty standard design that didn't involve much movement. The model
-            both deforms to movement of the user, and uses pendulum physics to apply secondary motion to parts of the model's body.
+            With the initial version, I learned the essential basics of the software, and didn't do anything too crazy. These tools ended up being in all the other versions to come, 
+            so I'll describe them out here.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Basic Movement and Dimensionality</div>
+          <div class="pageInfoText">
+            The basic movement of a model is controlled by the position of your head: left and right (x movement), up and down (y movement), and tilt rotation (z movement). Other controls 
+            include things like how open eyes are, what the mouth looks like, position of eyebrows, etc.
+          </div>
+          <div class="pageInfoText">
+            Because of the nature of the human (or in this case not-human) face, rigging a proper model requires knowledge of and 
+            planning for multiple of those parameters to be changing at once. As well as that, deformation order (deformation, rotation, scale, translation) is also incredibly important to 
+            understand and use to your advantage to make sure that the model deforms properly.
           </div>
         </div>
         <div class="pageImageBox">
-          <video src="img/v1 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image38')">
+          <img src="img/allThoseSliders.png" class="pageImage2" onclick="imageOpenHandler('image37.1')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/physicsvid - Made with Clipchamp.gif" class="pageImage2" onclick="imageOpenHandler('image37.2')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Physics!</div>
+          <div class="pageInfoText">
+            The extra (but honestly incredibly critical) bit that gives the model way more life is the automatic secondary movement of the model, also known as physics. In this model,
+            I implemented physics on the ears, side flufts, tail, and tassles of Cray.
+          </div>
+          <div class="pageInfoText">
+            Physics in this program revolve around a system that uses a pendulum. This gives the parameters physics are attatched to that delayed motion and sway that comes after. However,
+            unlike 3D engine physics, this one works by alternating along a slider of set values- meaning the rigger in this scenario has to create keyframes for the pendulum to vary between.
+
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Toggles</div>
+          <div class="pageInfoText">
+            Another aspect of models is toggles. These are essentially additional keyframes that usually rest at 0, and are activated with a non "automatic" input parameter like a 
+            manual keybind.
+          </div>
+          <div class="pageInfoText">
+            While the software now supports creating these files inside of the application that controls them, at the time of making this model these expression files had to be
+            created before importing the model into the program. Creating one of those files involves specifying set values for keyframes at the time the toggle is activated, and 
+            how long it takes for them to activate.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/toggles.gif" class="pageImage2" onclick="imageOpenHandler('image37.3')">
         </div>
       </div>
       <div class="pageInfoBox">
