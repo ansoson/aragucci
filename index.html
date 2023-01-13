@@ -83,6 +83,12 @@
   <div class="expandedImageBox" id="image37.1"><img controls="visible" src="img/allThoseSliders.png" class="expandedImage" loop></div>
   <div class="expandedImageBox" id="image37.2"><video controls="visible" src="img/physicsvid - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image37.3"><video controls="visible" src="img/toggles.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.4"><video controls="visible" src="img/v7snoot.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.5"><video controls="visible" src="img/jumpscare.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.6"><video controls="visible" src="img/arms.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.7"><video controls="visible" src="img/enhanced.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.8"><video controls="visible" src="img/outlines.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.9"><video controls="visible" src="img/tail.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image38"><video controls="visible" src="img/v1 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image39"><video controls="visible" src="img/v2 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
   <div class="expandedImageBox" id="image40"><video controls="visible" src="img/v3 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
@@ -403,6 +409,7 @@
         </div>
       </div>
       <img class="titleDivider" src="img/menuStar.png">
+      <!-- ------------------------------------------- -->
       <div class="pageInfoBox">
         <div class="pageInfoTextContainer">
           <div class="pageInfoTitle">Version 3.2</div>
@@ -442,7 +449,6 @@
           <div class="pageInfoText">
             Physics in this program revolve around a system that uses a pendulum. This gives the parameters physics are attatched to that delayed motion and sway that comes after. However,
             unlike 3D engine physics, this one works by alternating along a slider of set values- meaning the rigger in this scenario has to create keyframes for the pendulum to vary between.
-
           </div>
         </div>
       </div>
@@ -463,28 +469,134 @@
           <img src="img/toggles.gif" class="pageImage2" onclick="imageOpenHandler('image37.3')">
         </div>
       </div>
+      <img class="titleDivider" src="img/menuStar.png"> 
+      <!-- ------------------------------------------- -->
       <div class="pageInfoBox">
         <div class="pageInfoTextContainer">
-          <div class="pageInfoTitle">Version 2</div>
+          <div class="pageInfoTitle">Version 7.3</div>
           <div class="pageInfoText">
-            With the second version, I looked to expand the range of motion of the character. Additional layers and image culling was used to change the shape of the head so 
-            drastically with large movement. In addition to that, controls for ear movement were attatched to eyebrow movement for ease of control.
+            By far the problem child of the three, I spent a lot of time working out through testing how I could expand the limits of the program to add 
+            dimensionality to a very irregularly shaped face, while still keeping a consistent cartoony aesthetic.
           </div>
-        </div>
-        <div class="pageImageBox">
-          <video src="img/v2 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image39')">
         </div>
       </div>
       <div class="pageInfoBox">
-        <div class="pageInfoTextContainer">
-          <div class="pageInfoTitle">Version 3 (in development)</div>
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">The Snout Problem</div>
           <div class="pageInfoText">
-            The current version is in development right now, with physics and other movement addons are currently being added. The entire facial system was restructured,
-            with image shapes and their outlines being separated in order to keep a more consistent outline and shape on turns and deformation.
+            One of the things I wanted to expand in this model was the dimensionality, that is, allowing the model to make much wider turns. However, increasing the range of motion 
+            meant dealing with the snout on the character. Most people who use this program don't normally make characters like this, so at the time of making these models I was 
+            unable to find any documentation on creating a character with a snout that has a wide range of motion.
+          </div>
+          <div class="pageInfoText">
+            After a long sequence of revisions and redrawing pieces for the face, I came up with a model of having additional planes that only became visible after certain values
+            of character movement. With some clipping layers, the outlines become visible after enough displacement from the center position.
           </div>
         </div>
         <div class="pageImageBox">
-          <video src="img/v3 - Made with Clipchamp.mp4" class="pageImage" onclick="imageOpenHandler('image40')">
+          <img src="img/v7snoot.gif" class="pageImage2" onclick="imageOpenHandler('image37.4')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/jumpscare.gif" class="pageImage2" onclick="imageOpenHandler('image37.5')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Enhanced Physics and Controls</div>
+          <div class="pageInfoText">
+            Part of the impoartance of rigging a model is making use of it as easy as possible for the animator, or in this case, the person who's face is being tracked. In this model, 
+            I set certain elements that dont have a natural control (for example, the ears), to be controlled by other facial features.
+          </div>
+          <div class="pageInfoText">
+            The ears of the model are rigged to be controlled with the user's eyebrows. At near the highest and lowest points in the input, the ears are set to move up or down, as if 
+            the character is perking them up or putting them down in irritation. The eyes are also set to contract if the eyes are opened to an extreme amount. These controls are then tuned 
+            once in the program where inputs are measured to ensure that these reactions only happen when actively decided by the user, or when the user is genuinely surprised by soemthing 
+            and would naturally move those controlling features to the right intensity.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Toggles... With Parameters!</div>
+          <div class="pageInfoText">
+            I wanted to expand the toggles to feature different "modes" as opposed to just expressions. In this case, one of the toggles I added was one for a mouse and keyboard.
+          </div>
+          <div class="pageInfoText">
+            This toggle in particular hasa its own parameters that aren't used in the standard model. The mouse tracks the position based on the actual x coordinates of the user's mouse,
+            allowing for ease of control and additional movement that doesn't require any kind of additional effort on the part of the user.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/arms.gif" class="pageImage2" onclick="imageOpenHandler('image37.6')">
+        </div>
+      </div>
+      <img class="titleDivider" src="img/menuStar.png"> 
+      <!-- ------------------------------------------- -->
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 8.1 (in development)</div>
+          <div class="pageInfoText">
+            After the singinificant amount of trial, error, and experimentation of the previous version, I wanted to do one more with all of those features refined from the start, 
+            and more.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Enhanced Expression and Dimensionality</div>
+          <div class="pageInfoText">
+            WIth all the experience from the previous model under my belt, I went into version 8 with a new plan for how I wanted to rig dimensionality. Featuring a full 180 degree
+            range of motion, this model has almost twice the layers of the previous (totaling at over 100), shifting in and out of visibility as the model deforms.
+          </div>
+          <div class="pageInfoText">
+            Numerous other quality of animation changes were made, including:
+             x movement for the mouth to allow for significantly more expression on the face, and the amount of keyframes 
+            along the x and y axis going from 21 to 36, meaning significantly smoother and more dimensional movement.
+          </div>
+          <div class="pageInfoText">
+            X movement for the mouth to allow for significantly more expression on the face 
+          </div>
+          <div class="pageInfoText">
+            The amount of keyframes along the x and y axis going from 21 to 36, meaning significantly smoother and more dimensional movement.
+         </div>
+         <div class="pageInfoText">
+            Mouth movement and eyebrow movement now impact rest of the face, to simulate the muscles that move along a face and make it feel more whole as a character.
+       </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/enhanced.gif" class="pageImage2" onclick="imageOpenHandler('image37.7')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/outlines.gif" class="pageImage2" onclick="imageOpenHandler('image37.8')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Outline and Fill Separation Tech</div>
+          <div class="pageInfoText">
+            After a lot of planning and testing, I came up with a model for the facial peices to allow for dimensional movement while still looking nice: separating the outlines from the 
+            fill colors. 
+          </div>
+          <div class="pageInfoText">
+            By keeping deformations (mostly) uniform, but adjusting the live2D version of the z-index of the layers, I was able to create the effect I wanted where the outlines of the character
+            stay consistent, and don't overlap in places where it's not wanted. While hard to properly demonstrate, I'd definitely say that the model would not function at all without them.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Spline Chained Tail Physics</div>
+          <div class="pageInfoText">
+            Unlike previous versions of the tail, stuck in one position with basic jiggle, I wanted to take advantage of the pendulum nature of the program.
+          </div>
+          <div class="pageInfoText">
+            Similar to a 3D rig, I skinned bones all the way up the tail at the points where I wanted it to deform. These points were then attatched to the pendulum in 
+            reverse order in order to get the movement forces to travel up the tail from the base they originate from. I also experimented with damping and keyframes so that
+            the tail would return to an appealing pose when going back to resting. (ignore some of the jumpiness that comes from manually sliding the parameter with a mouse)
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/tail.gif" class="pageImage2" onclick="imageOpenHandler('image37.9')">
         </div>
       </div>
     </div>
