@@ -660,6 +660,14 @@ a::after {
   object-fit: cover;
 }
 
+.pageImage3point1 {
+  border-style:solid;
+  border-radius: 10px;
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
 .pageImage2:hover {
   cursor: pointer;
 }
@@ -673,6 +681,10 @@ a::after {
 }
 
 .pageImage3:hover {
+  cursor: pointer;
+}
+
+.pageImage3point1:hover {
   cursor: pointer;
 }
 
