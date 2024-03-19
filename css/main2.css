@@ -3,7 +3,7 @@ html {
     font-size: 1em;
     line-height: 1.4;
     background-color: #141414;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
@@ -21,12 +21,22 @@ a {
     color: rgb(152, 162, 171);
 }
 
+.background {
+    position: fixed;
+    z-index: -10;
+    background-color: #141414;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
 .html::-webkit-scrollbar {
     display: none;
 }
 
 .spacer {
-    height: 20dvh;
+    height: 20lvh;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -62,7 +72,7 @@ a {
 @keyframes irrelevantAnim {
     0%      {opacity: 100%; padding-top: 0}
     90%    {opacity: 0}
-    100%    {opacity: 0; padding-top: 20dvh}
+    100%    {opacity: 0; padding-top: 20lvh}
 }
 
 .becomeRelevant{
@@ -73,7 +83,7 @@ a {
 
 @keyframes relevantAnim {
     100%      {opacity: 100%; padding-top: 0}
-    0%    {opacity: 0%; padding-top: 20dvh}
+    0%    {opacity: 0%; padding-top: 20lvh}
 }
 
 .becomeIrrelevant {
@@ -174,11 +184,11 @@ a {
     position:sticky;
     top: 0;
     width: 100vw;
-    height: 13dvh;
+    height: 13lvh;
     min-height: 100px;
     z-index: 2;
     background: linear-gradient(#141414, rgba(1, 1, 1, 0));
-    padding-top: 3dvh;
+    padding-top: 3lvh;
 }
 
 .menuOpeningAnim{
@@ -190,7 +200,7 @@ a {
 @keyframes openingAnimation {
     0%      {opacity: 0;padding-top: 0;}
     33%     {opacity: 0;padding-top: 0;}
-    100%    {opacity: 100%;padding-top: 3dvh;}
+    100%    {opacity: 100%;padding-top: 3lvh;}
 }
 
 .menuItem {
@@ -201,7 +211,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5dvh;
+    height: 5lvh;
     min-height: 48px;
     margin-left:1vw;
     margin-right: 1vw;
@@ -223,7 +233,7 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 5dvh;
+    height: 5lvh;
     min-height: 48px;
     margin-left:1vw;
     margin-right: 1vw;
@@ -239,7 +249,7 @@ a {
     position: absolute;
     min-width: 50px;
     max-width: 100px;
-    margin-top: 1.5dvh;
+    margin-top: 1.5lvh;
     margin-left: 0;
     margin-right: 0;
     font-family: monospace;
@@ -265,7 +275,7 @@ a {
     display: flex;
     justify-content: left;
     align-items: center;
-    height: 5dvh;
+    height: 5l;
     min-height: 48px;
     margin-left:1vw;
     margin-right: 1vw;
@@ -293,7 +303,7 @@ a {
     display: flex;
     justify-content: right;
     align-items: center;
-    height: 5dvh;
+    height: 5lvh;
     min-height: 48px;
     margin-left:1vw;
     margin-right: 1vw;
@@ -314,9 +324,9 @@ a {
 }
 
 .menuStar {
-    width: 2.5dvh;
+    width: 2.5lvh;
     min-width: 20px;
-    height: 3dvh;
+    height: 3lvh;
     min-height: 25px;
     opacity: 70%;
     object-fit: fill;
@@ -326,8 +336,8 @@ a {
 .menuStarHovered {
     width: 20vw;
     min-width: 160px;
-    height: 8dvh;
-    min-height: 90px;
+    height: 9.5lvh;
+    min-height: 50px;
     object-fit: fill;
     display: inline-block;
 }
@@ -368,7 +378,7 @@ a {
 /* --------------------------------------------------- ABOUT ME -----------------------------------------------------*/
 
 .aboutMeBoxContainer {
-    margin-top: 3dvh;
+    margin-top: 3lvh;
     display: flex;
     justify-content: center;
     opacity: 100%;
@@ -391,7 +401,7 @@ a {
     justify-content: space-evenly;
     width: 40vw;
     min-width: 250px;
-    min-height: 50dvh;
+    min-height: 50lvh;
 }
 
 .aboutMeText {
@@ -408,7 +418,7 @@ a {
 
 @media only screen and (max-width: 768px) {
     .aboutMePicText {
-        font-size: 1em;
+        font-size: .6em;
     }
 }
 
@@ -462,17 +472,17 @@ a {
     align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    max-height: 70dvh;
+    max-height: 70lvh;
     min-width: 250px;
     max-width: 30dvw;
     background-color: #1c2126;
-    padding: 3dvh;
+    padding: 3lvh;
 }
 
 .codingPicMainOne{
     min-width: 250px;
     width: 25dvw;
-    height: 25dvh;
+    height: 25lvh;
     max-height: 30dvw;
     object-fit: cover;
 }
@@ -486,7 +496,7 @@ a {
     margin: 2px;
     min-width: 85px;
     width: 9dvw;
-    height: 10dvh;
+    height: 10lvh;
     max-height: 10dvw;
     object-fit: cover;
 }
@@ -500,9 +510,9 @@ a {
 }
 
 @keyframes unclickedAnim {
-    0%      {opacity: 20%; height: 2dvh}
-    50%     {opacity: 100%; height: 3dvh}
-    100%    {opacity: 20%; height: 2dvh}
+    0%      {opacity: 20%; height: 2lvh}
+    50%     {opacity: 100%; height: 3lvh}
+    100%    {opacity: 20%; height: 2lvh}
 }
 
 .sneakyOpenAnim {
