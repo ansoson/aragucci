@@ -1,0 +1,989 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<script src="js/main.js">
+</script>
+
+<script>  
+  window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+  }; 
+</script>
+
+<body>
+
+  <!-- Add your site or application content here -->
+
+  <div class="openedPageBackground" onclick="pageCloseHandler()" id="PageBackground"></div>
+  <div class="openedPageBackground2" onclick="imageCloseHandler()" id="imageBackground"></div>
+
+  <!-- ------------------------------------------- Images Are Here ------------------------------------------------- -->
+  <div class="expandedImageBox" id="image1"><img src="img/fund1.jpg" class="expandedImage" style="rotate: 180deg;"></div>
+  <div class="expandedImageBox" id="image2"><img src="img/fund2.jpg" class="expandedImage"></div>
+  <div class="expandedImageBox" id="image3"><img src="img/fund3.jpg" class="expandedImage" style="rotate: -90deg;"></div>
+  <div class="expandedImageBox" id="image4"><img src="img/fund4.jpg" class="expandedImage" style="rotate: -90deg;"></div>
+  <div class="expandedImageBox" id="image5"><img src="img/otter.jpg" class="expandedImage" style="rotate: -90deg;"></div>
+  <div class="expandedImageBox" id="image6"><img src="img/boxes.jpg" class="expandedImage" style="rotate: -90deg;"></div>
+  <div class="expandedImageBox" id="image7"><img src="img/fund11.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image8"><img src="img/fund12.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image9"><img src="img/car.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image10"><img src="img/whalemod.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image11"><img src="img/mug.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image12"><img src="img/wood.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image13"><img src="img/glass.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image14"><img src="img/plastic.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image15"><img src="img/copper.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image16"><img src="img/castiron.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image17"><video controls="visible" src="img/aragucci_shade_final.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image18"><img src="img/crayanwhale.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image19"><img src="img/knight.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image20"><img src="img/hornet.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image21"><img src="img/quirrel.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image22"><img src="img/rosa.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image23"><img src="img/aigu2.jpg" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image24"><video controls="visible" src="img/workin2.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image25"><img src="img/whalepop.gif" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image26"><video controls="visible" src="img/teaser.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image27"><img controls="visible" src="img/whalecycle.gif" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image28"><img controls="visible" src="img/10 sec.gif" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image29"><img controls="visible" src="img/stairhop.gif" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image30"><video controls="visible" src="img/aragucci_ball.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image31"><video controls="visible" src="img/aragucci_door.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image32"><video controls="visible" src="img/aragucci_rocket.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image33"><video controls="visible" src="img/aragucci_final_char.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image33.1"><video controls="visible" src="img/aragucci_walk_final.mp4" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.1.1"><video controls="visible" src="img/awoo.mp4" class="expandedImage" muted></div>
+    <div class="expandedImageBox" id="image33.2"><img src="img/moonbasefront.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.3"><img src="img/moonbaseback.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.4"><img src="img/frontwolf.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.4.1"><video controls="visible" src="img/aragucci_model_final.mp4" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.5"><img src="img/upfront.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.6"><img src="img/controls.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.7"><img src="img/skelly.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.7.1"><video controls="visible" src="img/reverse foot.mp4" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.8"><img src="img/jiggle.png" class="expandedImage" ></div>
+    <div class="expandedImageBox" id="image33.8.1"><video controls="visible" src="img/IKtoFK.mp4" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image34"><video controls="visible" src="img/walkcyclereal_1.0001.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image34.2"><img src="img/v1assembled.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image34.1"><img src="img/v1disassembled.png" class="expandedImage" ></div>
+  <div class="expandedImageBox" id="image34.3"><video controls="visible" src="img/eyeTechFull.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image34.4"><video controls="visible" src="img/thatsItVid.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image35"><img controls="visible" src="img/v1.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image36"><img controls="visible" src="img/v3.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37"><img controls="visible" src="img/v2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37.1"><img controls="visible" src="img/allThoseSliders.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image37.2"><video controls="visible" src="img/physicsvid - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.3"><video controls="visible" src="img/toggles.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.4"><video controls="visible" src="img/v7snoot.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.5"><video controls="visible" src="img/jumpscare.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.6"><video controls="visible" src="img/arms.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.7"><video controls="visible" src="img/enhanced.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.8"><video controls="visible" src="img/outlines.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image37.9"><video controls="visible" src="img/tail.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image38"><video controls="visible" src="img/v1 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image39"><video controls="visible" src="img/v2 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image40"><video controls="visible" src="img/v3 - Made with Clipchamp.mp4" class="expandedImage" loop></video></div>
+  <div class="expandedImageBox" id="image41"><img controls="visible" src="img/thorn1.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image42"><img controls="visible" src="img/thorn2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image43"><img controls="visible" src="img/thorn4.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image44"><img controls="visible" src="img/thorn3.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image45"><img controls="visible" src="img/brab1.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image46"><img controls="visible" src="img/brab2.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image47"><img controls="visible" src="img/brab3.png" class="expandedImage" loop></div>
+  <div class="expandedImageBox" id="image48"><img controls="visible" src="img/brab4.png" class="expandedImage" loop></div>
+
+
+  <!-- ------------------------------------------- ANATOMY AND FIGURE PAGE ------------------------------------------- -->
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun1">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">Anatomy and Figure Drawings</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText">While art had always been an interest of mine, and I had certainly picked up knowledge of perspective and proportions, 
+          I had never done a proper foundational introduction on them. In college I took a foundational class that
+          let me explicitly practice those basics
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Human Figure</div>
+          <div class="pageInfoText">
+            Based off of observation of models, started with lines of action, followed by the positioning of the ribcage and pelvis, before refining other shapes.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/fund1.jpg" style="rotate: 180deg;" class="pageImage" onclick="imageOpenHandler('image1')">
+          <img src="img/fund2.jpg" class="pageImage" onclick="imageOpenHandler('image2')">
+          <img src="img/fund3.jpg" class="pageImage" onclick="imageOpenHandler('image3')">
+          <img src="img/fund4.jpg" class="pageImage" onclick="imageOpenHandler('image4')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/otter.jpg" class="pageImage" onclick="imageOpenHandler('image5')">
+          <img src="img/boxes.jpg" class="pageImage" onclick="imageOpenHandler('image6')">
+          <img src="img/fund11.jpg" class="pageImage" onclick="imageOpenHandler('image7')">
+          <img src="img/fund12.jpg" class="pageImage" onclick="imageOpenHandler('image8')">
+        </div>
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Observational Drawings</div>
+          <div class="pageInfoText">
+            A series of drawings from observation of models, looking to capture form and volume
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ------------------------------------------- CODING BASICS PAGE ------------------------------------------- -->
+
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun2">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">Coding Basics</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText">My CS education startied with the introductory courses at Brown, with the intro path that focused on understanding 
+          the fundamentals of how code was processed and good coding practices, as opposed to jumping into a language like Java.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoText">Among the languages I know (from most to least comfortable) are:
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoText" style="margin: 2vw;">
+          <p>Java</p>
+        </div>
+        <div class="pageInfoText" style="margin: 2vw;">
+          <p>Javacript</p>
+        </div>
+        <div class="pageInfoText" style="margin: 2vw;">
+          <p>Html/Css</p>
+        </div>
+        <div class="pageInfoText" style="margin: 2vw;">
+          <p>C++</p>
+        </div>
+        <div class="pageInfoText" style="margin: 2vw;">
+          <p>Python</p>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoText">In addition to personal knowledge, I am also familiar with coding in a group setting- as in proper communication, Github file sharing,
+          software development sprint structure, generic coding vs. hard coding, and other important basic principles.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------- MODELING AND TEXTURES PAGE ------------------------------------------- -->
+
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun3">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">Modeling and Texturing</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText"> In order to do something with a model, that model first has to be made properly. In this page I have previous work demonstrating
+          knowledge of the basics of modeling in a 3D environment.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Modeling</div>
+          <div class="pageInfoText">
+            Organic and inorganic shapes, minimizing the amount of geometry to what is necessary and keeping quadrilateral faces wherever possible
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/car.png" class="pageImage" onclick="imageOpenHandler('image9')">
+          <img src="img/whalemod.png" class="pageImage" onclick="imageOpenHandler('image10')">
+          <img src="img/mug.png" class="pageImage" onclick="imageOpenHandler('image11')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">UV Mapping and Texturing</div>
+          <div class="pageInfoText">
+            A sequence of different shaders applied to the same object, using image files, procedural textures, and bump mapping to detail
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/wood.jpg" class="pageImage3" onclick="imageOpenHandler('image12')">
+          <img src="img/glass.jpg" class="pageImage3" onclick="imageOpenHandler('image13')">
+          <img src="img/plastic.jpg" class="pageImage3" onclick="imageOpenHandler('image14')">
+          <img src="img/copper.jpg" class="pageImage3" onclick="imageOpenHandler('image15')">
+          <img src="img/castiron.jpg" class="pageImage3" onclick="imageOpenHandler('image16')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Rendering</div>
+          <div class="pageInfoText">
+            Experience with Arnold rendering engine, as well as producing textures compatible with GPU rendering. 
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <video src="img/aragucci_shade_final.mp4" class="pageImage" onclick="imageOpenHandler('image17')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ------------------------------------------- ILLUSTRATION PAGE ------------------------------------------- -->
+
+<div class="openedPageBox">
+  <div class="openedPage" id="Fun4">
+    <div class="closeText">click anywhere outside to close</div>
+    <div class="pageTitle">Illustration</div>
+    <img class="titleDivider" src="img/menuStar.png">
+    <div class="pageInfoBox">
+      <div class="pageInfoText"> While not my main interest in terms of professional pursuit, I do spend a lot of time drawing, and the styles I've developed 
+        do end up influencing my other work quite a lot. I mostly illustrate by digital means, using programs like Procreate and Photoshop, and love using a wide variety of colors.
+      </div>
+      <div class="pageInfoText">
+      </div>
+    </div>
+    <div class="pageImageBox2">
+        <img src="img/crayanwhale.png" class="pageImage3" onclick="imageOpenHandler('image18')">
+        <img src="img/knight.png" class="pageImage3" onclick="imageOpenHandler('image19')">
+        <img src="img/hornet.png" class="pageImage3" onclick="imageOpenHandler('image20')">
+        <img src="img/quirrel.png" class="pageImage3" onclick="imageOpenHandler('image21')">
+        <img src="img/rosa.png" class="pageImage3" onclick="imageOpenHandler('image22')">
+        <img src="img/aigu.jpg" class="pageImage3" onclick="imageOpenHandler('image23')">
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------------- 2D ANIMATION PAGE ------------------------------------------- -->
+
+<div class="openedPageBox">
+  <div class="openedPage" id="Fun5">
+    <div class="closeText">click anywhere outside to close</div>
+    <div class="pageTitle">2D Animation</div>
+    <img class="titleDivider" src="img/menuStar.png">
+    <div class="pageInfoBox">
+      <div class="pageInfoText"> In 2D, I love animating characters that are bouncy, squishy, and overall pretty cute. In these animations I learned about the principles that 
+        communicate motion: weight and inertia, squash and stretch, etc.
+      </div>
+      <div class="pageInfoText">
+      </div>
+    </div>
+    <div class="pageImageBox2">
+        <img src="img/workingif.gif" class="pageImage3" onclick="imageOpenHandler('image24')">
+        <img src="img/whalepop.gif" class="pageImage3" onclick="imageOpenHandler('image25')">
+        <img src="img/teasergif.gif" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image26')">
+        <img src="img/whalecycle.gif" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image27')">
+        <img src="img/10 sec.gif" class="pageImage3" type="video/mp4"  onclick="imageOpenHandler('image28')">
+        <img src="img/stairhop.gif" class="pageImage3" onclick="imageOpenHandler('image29')">
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------------- 3D ANIMATION PAGE ------------------------------------------- -->
+
+<div class="openedPageBox">
+  <div class="openedPage" id="Fun6">
+    <div class="closeText">click anywhere outside to close</div>
+    <div class="pageTitle">3D Animation</div>
+    <img class="titleDivider" src="img/menuStar.png">
+    <div class="pageInfoBox">
+      <div class="pageInfoText"> 3D animation has been a newer place I've branched out to, but I've become much mroe comfortable with it the more work I do.
+        The animations below feature driven keys, motion path manipulation, and other uses of Maya's capabilities.
+      </div>
+      <div class="pageInfoText">
+      </div>
+    </div>
+    <div class="pageImageBox2">
+        <video src="img/aragucci_ball.mp4" class="pageImage3" onclick="imageOpenHandler('image30')" controls></video>
+        <video src="img/aragucci_door.mp4" class="pageImage3" onclick="imageOpenHandler('image31')" controls></video>
+        <video src="img/aragucci_rocket.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image32')" controls></video>
+        <video src="img/aragucci_final_char.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image33')" controls></video>
+        <video src="img/aragucci_walk_final.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image33.1')" controls></video>
+    </div>
+    <div class="pageInfoBox">
+      <div class="pageInfoTextContainer">
+        <div class="pageInfoTitle">Fully Animated Project</div>
+        <div class="pageInfoText">
+          A final group project animation, this project really skyrocketed my understanding of Maya and 3D animation in general. My group and I created every asset for the 
+          short film ourselves, my contributions to which are detailed in the tech art section (star all the way to the right). In terms of animation, I was responsible for 
+          animation, framing, and camera movement from 2:57 to 4:30, as well as walk and run cycles for our main character. Link to the vimeo is 
+          <a href="https://vimeo.com/channels/brownanimation/782693615" target="_blank">here</a>, titled "Rebel".
+        </div>
+      </div>
+        <img src="img/walkcycle.gif" class="pageImage3" onclick="imageOpenHandler('image34')">
+    </div>
+  </div>
+</div>
+
+  <!-- ------------------------------------------- Web Design Page ------------------------------------------- -->
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun7">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">Web Design</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText"> This site is entirely coded by me, using html, css, and javascript. 
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- ------------------------------------------- 2D RIGGING PAGE ------------------------------------------- -->
+
+   <div class="openedPageBox">
+    <div class="openedPage" id="Fun10">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">2D Rigging</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText"> My first introduction to rigging was actually something I wanted to try out for fun, creating a 2D model 
+          that could be rigged to to express itself based on your input facial paramaters, commonly known as V-Tubing. Although I never really did anything
+          with the models I made, I kept iterating with all new versions as I simply enjoyed creating them.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">How it Works</div>
+          <div class="pageInfoText">
+            A 2D Model, made using the software live2D Cubism, is a single character created by using multiple layers as individual pieces that make up the model. Each of these layers is 
+            assigned certain positions and deformation states at values for multiple keyframes. 
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/v1assembled.png" class="pageImage" onclick="imageOpenHandler('image34.2')">
+          <img src="img/v1disassembled.png" class="pageImage" onclick="imageOpenHandler('image34.1')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/eyeTechGif.gif" class="pageImage2" onclick="imageOpenHandler('image34.3')">
+        </div>
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoText">
+            For example, each layer that makes up an eye has keyframes assigned for x, y, and z movement, as
+            well as eyeOpen and eyeSmile (plus some other ones used in special toggles and keybinds). The xyz parameters adjust the position of each item, while the other 
+            keyframes adjust deformation that occours on the image. In one eye, each layer needs unique keyframes in order to properly warp to achieve the desired shapes.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoText">
+            While a very simple concept, actual execution ends up taking a very long time and a very good understanding of the space that you're imagining your character in,
+            as there isn't actually any 3D depth to them. Making and rigging a model requires a lot of planning and design to make it right, and it was especially true in my case.
+             as you'll see later, I ended up creating a lot of designs for the tech of my model from scratch.
+          </div>
+          <div class="pageImageBox" style="width: 92%; margin-top: 3vh;">
+            <img src="img/thatsItGif.gif" class="pageImage2"  onclick="imageOpenHandler('image34.4')">
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Versions</div>
+          <div class="pageInfoText">
+            Almost as soon as I had finished my first model, I had thought a lot about different ways I could rig more depth, range, and expression into it. With those ideas in mind,
+            I ended up redesigning, redrawing, and rerigging whole new versions of my little raccoon friend (who would later be named Cray). Each shift in technology dubbed a new 
+            version for the model. The final versions of each model are below, at versions 3.2, 7.3, and (in progress) 8.1.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/v1.png" class="pageImage3" onclick="imageOpenHandler('image35')">
+          <img src="img/v3.png" class="pageImage3" onclick="imageOpenHandler('image36')">
+          <img src="img/v2.png" class="pageImage3" onclick="imageOpenHandler('image37')">
+        </div>
+      </div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <!-- ------------------------------------------- -->
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 3.2</div>
+          <div class="pageInfoText">
+            With the initial version, I learned the essential basics of the software, and didn't do anything too crazy. These tools ended up being in all the other versions to come, 
+            so I'll describe them out here.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Basic Movement and Dimensionality</div>
+          <div class="pageInfoText">
+            The basic movement of a model is controlled by the position of your head: left and right (x movement), up and down (y movement), and tilt rotation (z movement). Other controls 
+            include things like how open eyes are, what the mouth looks like, position of eyebrows, etc.
+          </div>
+          <div class="pageInfoText">
+            Because of the nature of the human (or in this case not-human) face, rigging a proper model requires knowledge of and 
+            planning for multiple of those parameters to be changing at once. As well as that, deformation order (deformation, rotation, scale, translation) is also incredibly important to 
+            understand and use to your advantage to make sure that the model deforms properly.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/allThoseSliders.png" class="pageImage2" onclick="imageOpenHandler('image37.1')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/physicsvid - Made with Clipchamp.gif" class="pageImage2" onclick="imageOpenHandler('image37.2')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Physics!</div>
+          <div class="pageInfoText">
+            The extra (but honestly incredibly critical) bit that gives the model way more life is the automatic secondary movement of the model, also known as physics. In this model,
+            I implemented physics on the ears, side flufts, tail, and tassles of Cray.
+          </div>
+          <div class="pageInfoText">
+            Physics in this program revolve around a system that uses a pendulum. This gives the parameters physics are attatched to that delayed motion and sway that comes after. However,
+            unlike 3D engine physics, this one works by alternating along a slider of set values- meaning the rigger in this scenario has to create keyframes for the pendulum to vary between.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Toggles</div>
+          <div class="pageInfoText">
+            Another aspect of models is toggles. These are essentially additional keyframes that usually rest at 0, and are activated with a non "automatic" input parameter like a 
+            manual keybind.
+          </div>
+          <div class="pageInfoText">
+            While the software now supports creating these files inside of the application that controls them, at the time of making this model these expression files had to be
+            created before importing the model into the program. Creating one of those files involves specifying set values for keyframes at the time the toggle is activated, and 
+            how long it takes for them to activate.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/toggles.gif" class="pageImage2" onclick="imageOpenHandler('image37.3')">
+        </div>
+      </div>
+      <img class="titleDivider" src="img/menuStar.png"> 
+      <!-- ------------------------------------------- -->
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 7.3</div>
+          <div class="pageInfoText">
+            By far the problem child of the three, I spent a lot of time working out through testing how I could expand the limits of the program to add 
+            dimensionality to a very irregularly shaped face, while still keeping a consistent cartoony aesthetic.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">The Snout Problem</div>
+          <div class="pageInfoText">
+            One of the things I wanted to expand in this model was the dimensionality, that is, allowing the model to make much wider turns. However, increasing the range of motion 
+            meant dealing with the snout on the character. Most people who use this program don't normally make characters like this, so at the time of making these models I was 
+            unable to find any documentation on creating a character with a snout that has a wide range of motion.
+          </div>
+          <div class="pageInfoText">
+            After a long sequence of revisions and redrawing pieces for the face, I came up with a model of having additional planes that only became visible after certain values
+            of character movement. With some clipping layers, the outlines become visible after enough displacement from the center position.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/v7snoot.gif" class="pageImage2" onclick="imageOpenHandler('image37.4')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/jumpscare.gif" class="pageImage2" onclick="imageOpenHandler('image37.5')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Enhanced Physics and Controls</div>
+          <div class="pageInfoText">
+            Part of the impoartance of rigging a model is making use of it as easy as possible for the animator, or in this case, the person who's face is being tracked. In this model, 
+            I set certain elements that dont have a natural control (for example, the ears), to be controlled by other facial features.
+          </div>
+          <div class="pageInfoText">
+            The ears of the model are rigged to be controlled with the user's eyebrows. At near the highest and lowest points in the input, the ears are set to move up or down, as if 
+            the character is perking them up or putting them down in irritation. The eyes are also set to contract if the eyes are opened to an extreme amount. These controls are then tuned 
+            once in the program where inputs are measured to ensure that these reactions only happen when actively decided by the user, or when the user is genuinely surprised by soemthing 
+            and would naturally move those controlling features to the right intensity.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Toggles... With Parameters!</div>
+          <div class="pageInfoText">
+            I wanted to expand the toggles to feature different "modes" as opposed to just expressions. In this case, one of the toggles I added was one for a mouse and keyboard.
+          </div>
+          <div class="pageInfoText">
+            This toggle in particular hasa its own parameters that aren't used in the standard model. The mouse tracks the position based on the actual x coordinates of the user's mouse,
+            allowing for ease of control and additional movement that doesn't require any kind of additional effort on the part of the user.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/arms.gif" class="pageImage2" onclick="imageOpenHandler('image37.6')">
+        </div>
+      </div>
+      <img class="titleDivider" src="img/menuStar.png"> 
+      <!-- ------------------------------------------- -->
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Version 8.1 (in development)</div>
+          <div class="pageInfoText">
+            After the singinificant amount of trial, error, and experimentation of the previous version, I wanted to do one more with all of those features refined from the start, 
+            and more.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Enhanced Expression and Dimensionality</div>
+          <div class="pageInfoText">
+            WIth all the experience from the previous model under my belt, I went into version 8 with a new plan for how I wanted to rig dimensionality. Featuring a full 180 degree
+            range of motion, this model has almost twice the layers of the previous (totaling at over 100), shifting in and out of visibility as the model deforms.
+          </div>
+          <div class="pageInfoText">
+            Numerous other quality of animation changes were made, including:
+          </div>
+          <div class="pageInfoText">
+            X movement for the mouth to allow for significantly more expression on the face 
+          </div>
+          <div class="pageInfoText">
+            The amount of keyframes along the x and y axis going from 21 to 36, meaning significantly smoother and more dimensional movement.
+         </div>
+         <div class="pageInfoText">
+            Mouth movement and eyebrow movement now impact rest of the face, to simulate the muscles that move along a face and make it feel more whole as a character.
+       </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/enhanced.gif" class="pageImage2" onclick="imageOpenHandler('image37.7')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/outlines.gif" class="pageImage2" onclick="imageOpenHandler('image37.8')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Outline and Fill Separation Tech</div>
+          <div class="pageInfoText">
+            After a lot of planning and testing, I came up with a model for the facial peices to allow for dimensional movement while still looking nice: separating the outlines from the 
+            fill colors. 
+          </div>
+          <div class="pageInfoText">
+            By keeping deformations (mostly) uniform, but adjusting the live2D version of the z-index of the layers, I was able to create the effect I wanted where the outlines of the character
+            stay consistent, and don't overlap in places where it's not wanted. While hard to properly demonstrate, I'd definitely say that the model would not function at all without them.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 70%;">
+          <div class="pageInfoTitle">Spline Chained Tail Physics</div>
+          <div class="pageInfoText">
+            Unlike previous versions of the tail, stuck in one position with basic jiggle, I wanted to take advantage of the pendulum nature of the program.
+          </div>
+          <div class="pageInfoText">
+            Similar to a 3D rig, I skinned bones all the way up the tail at the points where I wanted it to deform. These points were then attatched to the pendulum in 
+            reverse order in order to get the movement forces to travel up the tail from the base they originate from. I also experimented with damping and keyframes so that
+            the tail would return to an appealing pose when going back to resting. (ignore some of the jumpiness that comes from manually sliding the parameter with a mouse)
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/tail.gif" class="pageImage2" onclick="imageOpenHandler('image37.9')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------- 3D RIGGING PAGE ------------------------------------------- -->
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun11">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">3D Rigging</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageTitle">Most Recent Project: Moon</div>
+      <video src="img/aragucci_walk_final.mp4" class="pageImage3point1" type="video/mp4" onclick="imageOpenHandler('image33.1')" controls autoplay></video>
+      <video src="img/awoo.mp4" class="pageImage3point1" type="video/mp4" onclick="imageOpenHandler('image33.1.1')" controls autoplay muted></video>
+      <div class="pageInfoBox">
+        <div class="pageInfoText">With this project, I modeled, painted, rigged, and animated a werewolf character, going through the whole process to better understand the importance 
+        of certain aspects between the different areas that get a character running. While by no means perfect, I was able to experiment with skeleton placement and overall become much more comfortable
+        with 3D rigging.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Modeling</div>
+          <div class="pageInfoText">
+           Starting off with this project, I knew that the topology of the model would be important, as I planned on having a lot of geometry in the final skinned surface, and a single skin 
+           layer (minus eyes and teeth).
+          </div>
+          <div class="pageInfoText">
+           In modeling the character, I followed a simple structure created from hollow cylinders, in order to define edgeflow so that subdivisions later would follow along an ideal path. Then, I subdivided and 
+           sculpted in Autodesk Mudbox to add definition to the character, reduced most of the additional geometry in low-deformation areas, and then painting along the surface to add stylized depth and texture.
+          </div>
+        </div>
+        <div class="pageImageBox" style="min-height: 200px">
+          <img src="img/moonbasefront.png" class="pageImage3" style="width: 50%" onclick="imageOpenHandler('image33.2')">
+          <img src="img/moonbaseback.png" class="pageImage3" style="width: 50%" onclick="imageOpenHandler('image33.3')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/frontwolf.png" class="pageImage3" onclick="imageOpenHandler('image33.4')">
+          <video src="img/aragucci_model_final.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image33.4.1')" controls autoplay muted></video>
+          <img src="img/upfront.png" class="pageImage3" onclick="imageOpenHandler('image33.5')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox" style="min-height: 200px">
+          <img src="img/controls.png" class="pageImage3" onclick="imageOpenHandler('image33.6')">
+          <img src="img/skelly.png" class="pageImage3" onclick="imageOpenHandler('image33.7')">
+        </div>
+        <div class="pageInfoTextContainer" style="width: 60%;">
+          <div class="pageInfoTitle">Controllers</div>
+          <div class="pageInfoText">
+           The rig for this character includes standard nurbs curve controls for animators, as well as multiple different types of bone control methods.
+          </div>
+          <div class="pageInfoText">
+           Among them are an IK spline neck, spine, and tail, IK handle legs, IK/FK switchable arms, custom attribute reverse foot controls, rudamentary jiggle deformation on the chracters mane to add 
+           additional automatic secondary movement, among a few other things.
+          </div>
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <video src="img/reverse foot.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image33.7.1')" controls autoplay></video>
+          <img src="img/jiggle.png" class="pageImage3" onclick="imageOpenHandler('image33.8')">
+          <video src="img/IKtoFK.mp4" class="pageImage3" type="video/mp4" onclick="imageOpenHandler('image33.8.1')" controls autoplay></video>
+        </div>
+      </div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText">The following models are for the fall 2022 project I did's main characters: 2 bipeds, and one octopus monster.
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Bipedal Main Character</div>
+          <div class="pageInfoText">
+            I modeled and rigged the main character for the animation over the course of about one to two weeks. In that time, I sculpted, rigged and weighted, and created blend shape
+            expressions for myself and my teammates to use in animation. 
+          </div>
+          <div class="pageInfoText">
+            Some of the models features include: Eyes controlled with a driven key attatched to the UV maps of eye planes, IK spring solver legs, curve and cluster controlled tail, as 
+            well as structure for animating individual finger curl and ear movement. Despite the somewhat stubby appendages of the character, I was able to make the model capture a 
+            pretty wide range of motion.
+          </div>
+        </div>
+        <div class="pageImageBox">
+          <img src="img/thorn1.png" class="pageImage" onclick="imageOpenHandler('image41')">
+          <img src="img/thorn2.png" class="pageImage" onclick="imageOpenHandler('image42')">
+          <img src="img/thorn4.png" class="pageImage" onclick="imageOpenHandler('image43')">
+          <img src="img/thorn3.png" class="pageImage" onclick="imageOpenHandler('image44')">
+        </div>
+      </div>
+      <div class="pageInfoBox">
+        <div class="pageImageBox">
+          <img src="img/brab1.png" class="pageImage" onclick="imageOpenHandler('image45')">
+          <img src="img/brab2.png" class="pageImage" onclick="imageOpenHandler('image46')">
+          <img src="img/brab3.png" class="pageImage" onclick="imageOpenHandler('image47')">
+          <img src="img/brab4.png" class="pageImage" onclick="imageOpenHandler('image48')">
+        </div>
+        <div class="pageInfoTextContainer">
+          <div class="pageInfoTitle">Monstrous Antagonist</div>
+          <div class="pageInfoText">
+            The antagonist of our movie was really where I had the most fun in creating a villain. Naturally, given our limited experience and even more limited amount of
+            time to put our plan together, I had to come up with a control scheme for a monster that would allow us to maximize his presence. What I came up with was a central 
+            body piece controlled by a curve, a set of three tentacles that would remain around him, and a theoretically infinite number of detatched motion pathed tentacles that could be
+            aimed and placed wherever based on the position of the camera, and adjusted to time.
+          </div>
+          <div class="pageInfoText">
+            Part of the model also included blend shapes for eyes and mouth open/close, as well as a high-emission plane located in the body to give him the contrasting black and white
+            appearance we wanted.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------- Under Construction Page ------------------------------------------- -->
+  <div class="openedPageBox">
+    <div class="openedPage" id="Fun21">
+      <div class="closeText">click anywhere outside to close</div>
+      <div class="pageTitle">Page Currently Under Construction</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="pageInfoBox">
+        <div class="pageInfoText"> The page should be up soon, check back later!
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="clickAnimationContainer">
+    <img src="img/buttonClick.png" class="claspAnimation" id="clickEffect" onclick="openingAnimation()"></img>
+  </div>
+  <div class="folderBottom" id="folderBottom">
+    <img src="img/starbuttonback.png" class="claspButtonBack">
+  </div>
+  <div class="folderTop" id="folderTop">
+    <div class="topFolderRibbon"></div>
+  </div>
+  <div class="claspContainer" id="clasp">
+    <div class="clasp">
+      <img src="img/starbutton.png" onclick="openingAnimation()" class="claspButton animatedClasp" id="spinningStar"></img>
+    </div>
+  </div>
+
+
+
+  <div class="spacer" id="spacer"></div>
+  <div class="menu" id="topMenu">
+    <div class="menuItem" style="margin-top:40px;" id="1" onclick="handleMenuClick('1')">
+      <div class="menuItemText">
+      <img src="img/menuStar.png" class="menuStar menuStarHovers" id="menuStar1"></img>
+      <img src="img/menuStarHovered.png" class="menuStarHovered menuStarHoveredHovers" id="menuStarHovered1"></img>
+      <div class="menuWords menuWordsHovers" id="menuWords1"> Fundamentals </div>
+    </div>
+    </div>
+    <div class="menuItem" style="margin-top:13px;" id="2" onclick="handleMenuClick('2')">
+      <div class="menuItemText">
+        <img src="img/menuStar.png" class="menuStar menuStarHovers" id="menuStar2"></img>
+        <img src="img/menuStarHovered.png" class="menuStarHovered menuStarHoveredHovers" id="menuStarHovered2"></img>
+        <div class="menuWords menuWordsHovers" id="menuWords2"> Animation </div>
+      </div>
+    </div>
+    <div class="menuItem" id="3" onclick="handleMenuClick('3')">
+      <div class="menuItemText">
+      <img src="img/menuStar.png" class="menuStar starClicked" id="menuStar3"></img>
+      <img src="img/menuStarHovered.png" class="menuStarHovered hoveredClicked" id="menuStarHovered3"></img>
+      <div class="menuWords wordsClicked" id="menuWords3"> About Me </div>
+    </div>
+    </div>
+    <div class="menuItem" style="margin-top:13px;" id="4" onclick="handleMenuClick('4')">
+      <div class="menuItemText">
+      <img src="img/menuStar.png" class="menuStar menuStarHovers" id="menuStar4"></img></div>
+      <img src="img/menuStarHovered.png" class="menuStarHovered menuStarHoveredHovers" id="menuStarHovered4"></img>
+      <div class="menuWords menuWordsHovers" id="menuWords4"> Programming</div>
+    </div>
+    <div class="menuItem" style="margin-top:40px;" id="5" onclick="handleMenuClick('5')">
+      <div class="menuItemText">
+      <img src="img/menuStar.png" class="menuStar menuStarHovers" id="menuStar5"></img></div>
+      <img src="img/menuStarHovered.png" class="menuStarHovered menuStarHoveredHovers" id="menuStarHovered5"></img>
+      <div class="menuWords menuWordsHovers" id="menuWords5"> Tech Art </div>
+    </div>
+  </div>
+<script>
+  this.document.getElementById("1").addEventListener("mouseout", () => {mouseOffMenuHandler('1')});
+
+  this.document.getElementById("2").addEventListener("mouseout", () => {mouseOffMenuHandler('2')});
+
+  this.document.getElementById("3").addEventListener("mouseout", () => {mouseOffMenuHandler('3')});
+
+  this.document.getElementById("4").addEventListener("mouseout", () => {mouseOffMenuHandler('4')}); 
+
+  this.document.getElementById("5").addEventListener("mouseout", () => {mouseOffMenuHandler('5')});
+</script>
+
+<div class="fileContainer" id="fileContainer">
+  
+  <!-- ------------------------------------------- Fundamentals Section ------------------------------------------------- -->
+  <div class="offscreenFile" id="visibleFile1">
+    <div class="fileHeader">
+      <div class="fileTitle">Fundamentals</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="headerText"> 
+       <p>Solid foundations are incredibly important for any creator, and only become more so as the project gets more complicated</p> 
+       <p>In both art and coding, I've done extensive work in developing a solid fundamental undertanding of the tools and concepts needed for creating</p> 
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun1')" id="FunPocket1">
+      <img class="pocketImage" src="img/anatomy.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Anatomy and Figure</p>
+        <p>Through observation, study, and practice in both digital and traditional mediums I understand fundamentals of the human form and figure</p>
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun2')" id="FunPocket2">
+      <div class="pocketText">
+        <p class="pocketTitle">Coding Basics</p>
+        <p>Study of the fundamentals of code, starting from functional programming and moving to object oriented skills</p>
+      </div>
+      <img class="pocketDivider" src="img/menuStar.png">
+      <img class="pocketImage" src="img/codeBasics.png"> 
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun3')" id="FunPocket3">
+      <img class="pocketImage" src="img/modelingBasics2.png">
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Modeling and Texturing</p>
+        <p>Fundamental 3D modeling and sculpting, including UV shell mapping and procedural textures</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------- Illust and Anim Sec ------------------------------------------------- -->
+  <div class="offscreenFile" id="visibleFile2">
+    <div class="fileHeader">
+      <div class="fileTitle">Illustration And Animation</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="headerText"> 
+       <p>I've had a passion for animation for as long as I can remember, and have always been creating things in my free time. While I initally drew more for personal reasons,
+        I more recently branched out in a wide range of styles to expand what I can do, both personally and in communication with others in a professional setting.
+       </p> 
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun4')" id="FunPocket1">
+      <img class="pocketImage" src="img/illustration.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Illustration</p>
+        <p>A collection of works in varying styles and sizes</p>
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun5')" id="FunPocket2">
+      <div class="pocketText">
+        <p class="pocketTitle">2D Animation</p>
+        <p>A collection of works comprised mostly of digitally hand-drawn animations</p>
+      </div>
+      <img class="pocketDivider" src="img/menuStar.png">
+      <img class="pocketImage" src="img/2danim.png"> 
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun6')" id="FunPocket3">
+      <img class="pocketImage" src="img/3danim.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">3D Animation</p>
+        <p>A collection of works comprised of animations made with Maya software</p>
+      </div>
+    </div>
+  </div> 
+
+  <!-- ------------------------------------------- About Section ------------------------------------------------- -->
+  <div class="file" id="visibleFile3">    
+      <div class="fileHeader">
+        <div class="fileTitle">"Shoot for the moon, because even if you miss you'll land among the stars"</div>
+        <img class="titleDivider" src="img/menuStar.png">
+        <div class="headerText"> 
+         <p>Hi, I'm Anthony! I'm a student at Brown University studying computer science, focusing on visual computing.</p> 
+         <p>I'm currently in my third year, focusing on developing my skills at the intersection of art and technology. In my free time, I can almost always be found near a computer, 
+          either drawing, rigging a new model, or playing League of Legends (Masters player and Star Guardian enthusiast). If I'm not there, then I'm most likely playing piano, hanging around campus with friends, 
+          or in the kitchen baking some kind of dessert. While I love almost every form that art and animation takes, I have a particular fondness for the cute, the creature-like, and the cosmic.
+         </p> 
+         <p>This portfolio site showcases the experience and work I've done, ranging from traditional illustration to character rigging to game ai and everything in between.</p> 
+         <p>Navigate using the stars at the top, click on images to expand them, and if you have questions about anything feel free to contact me at anthony_ragucci@brown.edu</p> 
+        </div>
+      </div>
+  </div>
+
+  <!-- ------------------------------------------- Programming Section ------------------------------------------------- -->
+  <div class="offscreenFile" id="visibleFile4">
+    <div class="fileHeader">
+      <div class="fileTitle">Programming</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="headerText"> 
+       <p>As a CS student, I've done a lot of work in different languages and with differnt types of products, ranging from ones focused on artistry
+        to others focused on functionality.
+       </p> 
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+      <img class="pocketImage" src="img/thisSite.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Web Design</p>
+        <p>Hand coded Html, Css, and Javascript websites, including the one you're on now!</p>
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+      <div class="pocketText">
+        <p class="pocketTitle">Game Ai and Other Projects</p>
+        <p>A series of projects using functional programming</p>
+      </div>
+      <img class="pocketDivider" src="img/menuStar.png">
+      <img class="pocketImage" src="img/connectFour.png"> 
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+      <img class="pocketImage" src="img/shapes.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Graphics Projects</p>
+        <p>A collection of projects ranging from ...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------- Tech Art Section ------------------------------------------------- -->
+  <div class="offscreenFile" id="visibleFile5">
+    <div class="fileHeader">
+      <div class="fileTitle">Rigging & Tech Art</div>
+      <img class="titleDivider" src="img/menuStar.png">
+      <div class="headerText"> 
+       <p>This is where all of those previous experiences come together, and definitely where I get the most excited</p> 
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun10')" id="FunPocket1">
+      <img class="pocketImage" src="img/2drig.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">2D Model Rigging</p>
+        <p>A model controlled with facial expressions, composed of 100+ 2D image layers</p>
+      </div>
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun11')" id="FunPocket1">
+      <div class="pocketText">
+        <p class="pocketTitle">3D Model Rigging</p>
+        <p>3D character rigs from a project I worked on Fall 2022</p>
+      </div>
+      <img class="pocketDivider" src="img/menuStar.png">
+      <img class="pocketImage" src="img/3drig.png"> 
+    </div>
+    <div class="filePocket" onclick="pageOpenHandler('Fun21')" id="FunPocket1">
+      <img class="pocketImage" src="img/effects.png"> 
+      <img class="pocketDivider" src="img/menuStar.png">
+      <div class="pocketText">
+        <p class="pocketTitle">Simulation, Physics, and Node Editing</p>
+        <p>Cloth, Hair, and Curve systems that were used in a project fall 2022</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
