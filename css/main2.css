@@ -406,6 +406,12 @@ a {
     font-family: monospace;
 }
 
+@media only screen and (max-width: 768px) {
+    .aboutMePicText {
+        font-size: 1em;
+    }
+}
+
 .aboutMeTextHeader {
     width: 40vw;
     min-width: 250px;
