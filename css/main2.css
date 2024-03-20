@@ -218,11 +218,10 @@ a {
     z-index: 1;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-device-width: 480px) {
     .menuItem {
         display: none;
     }
-
     body{
         -webkit-text-size-adjust: 100%;
     }
@@ -253,9 +252,10 @@ a {
     position: absolute;
     min-width: 50px;
     max-width: 100px;
-    margin-top: 1.5lvh;
     margin-left: 0;
     margin-right: 0;
+    height: 9.5lvh;
+    min-height: 50px;
     font-family: monospace;
     font-size: 1.4em;
     font-weight: bolder;
