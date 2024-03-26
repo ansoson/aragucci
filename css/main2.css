@@ -354,8 +354,14 @@ a {
 
 @keyframes shuffleAnimation {
     0% {}
-    50% {width: 20px; min-width: 20px;}
-    100% {    min-width: 160px;    width: 20vw;}
+    50% {width: 20px;
+        min-width: 20px;
+        height: 15px;
+        min-height: 15px;}
+    100% {min-width: 160px;
+        width: 20vw;
+        height: 9.5lvh;
+        min-height: 50px;}
 }
 
 .shuffleAnim2 {
