@@ -497,6 +497,14 @@ a {
     object-fit: cover;
 }
 
+.codingPicMainOne2{
+    min-width: 200px;
+    width: 25dvw;
+    height: 20lvh;
+    max-height: 20dvw;
+    object-fit: cover;
+}
+
 .miniCodingPicBox{
     display: flex;
     justify-content: space-around;
