@@ -33,7 +33,7 @@
 <body>
 <div class="background"></div>
 <!----------------------------------------------IMAGE CLOSE UPS---------------------------------------------------->
-<div>
+<div id="expandedImages">
     <div class="openedPageBackground2 closeAnimation" onclick="imageCloseHandler()" id="imageBackground"></div>
     <div class="expandedImageBox" id="image1"><img src="img/placeholder.png" class="expandedImage" style="rotate: 0deg;"></div>
     <div class="expandedImageBox" id="image2"><video controls="visible" src="img/SiteLoop.mp4" class="expandedImage"></video></div>
@@ -53,6 +53,10 @@
     <div class="expandedImageBox" id="image17"><video controls="visible" src="img/brownian_preview.mp4" class="expandedImage"></video></div>
     <div class="expandedImageBox" id="image18"><video controls="visible" src="img/gen_eng_preview.mp4" class="expandedImage"></video></div>
     <div class="expandedImageBox" id="image19"><video controls="visible" src="img/openanim_vid.mp4" class="expandedImage"></video></div>
+    <div class="expandedImageBox" id="image20"><video controls="visible" src="img/leafsheep.mp4" class="expandedImage"></video></div>
+    <div class="expandedImageBox" id="image21"><video controls="visible" src="img/scalegameplay.mp4" class="expandedImage"></video></div>
+    <div class="expandedImageBox" id="image22"><img src="img/scalegame.png" class="expandedImage" style="rotate: 0deg;"></div>
+    <div class="expandedImageBox" id="image23"><img src="img/scalemenu.png" class="expandedImage" style="rotate: 0deg;"></div>
 </div>
 
 <div class="spacer" id="spacer"></div>
@@ -110,15 +114,15 @@
                 <img class="titleDividerStar" src="img/menuStar.png">
             </div>
             <div class="aboutMeText">
-                Hi I'm Anthony, a senior at Brown University studying computer science.
-                An artist at heart, I have a passion for how technology intersects with people, from web design to animation
+                Hi I'm Anthony, a computer science graduate from Brown University.
+                An artist at heart, I have a passion for how technology intersects with creativity, from web design to animation
                 to game engines.
             </div>
             <div class="aboutMeText">
                 Use the ✨ in the top menu to navigate, and click on images to open and close them.
             </div>
             <div class="aboutMeText">
-                Contact: anthony_ragucci@brown.edu
+                Contact: anmara2002@gmail.com
             </div>
         </div>
         <div class="aboutMePicVerticalCenterBox">
@@ -134,6 +138,41 @@
 </div>
 <!-----------------------------------------------CODING SECTION------------------------------------------------------->
 <div class="sectionContainer becomeIrrelevant" id="section 2">
+    <div class="aboutMeBoxContainer" >
+        <div class="aboutMeBox">
+            <div class="aboutMeTextVerticalCenterBox">
+                <div class="aboutMeTextHeader">
+                    Game Direction and Design
+                </div>
+                <div class="titleDivider">
+                    <img class="titleDividerStar" src="img/menuStar.png">
+                </div>
+                <div class="aboutMeText">
+                    In August of 2024, the YouTube channel GameMakers Toolkit ran their annual Game Jam with the theme "built to scale." I along with some of my alumni friends created a game called <a href="https://legoliomanikas.itch.io/scale-mail" target="_blank">Scale Mail</a>
+                </div>
+                <div class="aboutMeText">
+                    Out of 7.6k submissions, our game was rated #2 in Enjoyment and #4 Overall. We were recognized as one of the winners and featured in <a href="https://youtu.be/gqCAeFjB8Uo?t=968" target="_blank">this video.</a>
+                </div>
+                <div class="aboutMeText">
+                    In order to create an enjoyable game with only four days of development time, I led the design of both gameplay and art direction, focusing in on simple and polished gameplay as well as an art style that was easly replicable by multiple artists to keep consistency.
+                </div>
+            </div>
+
+            <div class="codingPicVerticalCenterBox">
+                <div class="codingPicMainOne">
+                    <video src="img/scalegameplay.mp4" class="codingPicMainOne" onclick="imageOpenHandler('image21')" preload autoplay muted loop playsinline poster></video>
+                </div>
+                <div class="miniCodingPicBox">
+                    <div class="codingPic">
+                        <img src="img/scalegame.png" class="codingPic" onclick="imageOpenHandler('image22')"></img>
+                    </div>
+                    <div class="codingPic">
+                        <img src="img/scalemenu.png" class="codingPic" onclick="imageOpenHandler('image23')" ></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="aboutMeBoxContainer" >
     <div class="aboutMeBox">
         <div class="aboutMeTextVerticalCenterBox">
@@ -229,14 +268,14 @@
                     <img class="titleDividerStar" src="img/menuStar.png">
                 </div>
                 <div class="aboutMeText">
-                    As part of my classes at Brown, I've been able to experience every part of the animation pipeline:
-                    Modeling to rigging, texturing to lighting, storyboarding to animation. While I enjoy most parts
-                    of the pipeline, my favorite is Technical Direction.
+                    As part of Brown cirriculum, I've done work in every part of the animation pipeline:
+                    Modeling to rigging, texturing to lighting, storyboarding to animation. I chose to pursue technical direction,
+                    as I found not only enjoyment in the rigging process, but a passion for finding innovations that can enable artists to go further.
                 </div>
                 <div class="aboutMeText">
                     I've had the chance to create a number of characters for assignments and projects in this class--
                     each with differing body types and structures. In each of these, I've been able to experiment with
-                    different IK/FK systems and creating control schemes for driven keys, blend shapes, and uv projection.
+                    different IK/FK systems and creating control schemes for driven keys, blend shapes, and uv projection. 
                 </div>
             </div>
             <div class="codingPicVerticalCenterBox">
@@ -250,6 +289,57 @@
                     <div class="codingPic">
                         <video src="img/awoo.mp4" class="codingPic" onclick="imageOpenHandler('image7')" preload autoplay muted loop playsinline poster></video>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aboutMeBoxContainer" >
+        <div class="aboutMeBox">
+            <div class="aboutMeTextVerticalCenterBox">
+                <div class="aboutMeTextHeader">
+                    2D Character Rigging
+                </div>
+                <div class="titleDivider">
+                    <img class="titleDividerStar" src="img/menuStar.png">
+                </div>
+                <div class="aboutMeText">
+                    Prior to my work in 3D rigging, I had been personally interested in and taught myself 2D rigging through creating VTube models- rigged characters that respond to live facial movement.
+                </div>
+                <div class="aboutMeText">
+                    This model consists of over 100 separate 2D images, each of which have ranges of motion defined by
+                    sets of keyframes (an earlier model is disassembled in the middle right image). These keyframes are
+                    then evaluated based on facial data from the program VTube studio, and the model then reacts
+                    accordingly. As well as that, pendulum-based physics are applied after movement to create secondary motion.
+                </div>
+                <div class="aboutMeText">
+                    For example, each layer that makes up an eye has keyframes assigned for x, y, and z movement, as
+                    well as eyeOpen and eyeSmile. The xyz parameters adjust the position of each layer as the user turns their head, while the others deform its shape
+                    while the user blinks or smiles. In order to create a head with 180 degrees of movement, I iterated over
+                    several versions to create a design that would function ideally.
+                </div>
+                <div class="aboutMeText">
+                    While no two models are the same, I've learned how to incorporate designs and technology from previous models into future ones.
+                     While the model you see at the bottom looks quite different, I was able to create it substantially faster by using a number of design elements from
+                     the model featured above.
+                </div>
+            </div>
+            <div class="codingPicVerticalCenterBox">
+                <div class="codingPicMainOne">
+                    <video src="img/preview2DModel.mp4" class="codingPicMainOne" onclick="imageOpenHandler('image14')" preload autoplay muted loop playsinline poster></video>
+                </div>
+                <div class="miniCodingPicBox">
+                    <div class="codingPic">
+                        <video src="img/eyeTechFull.mp4" class="codingPic" onclick="imageOpenHandler('image15')" preload autoplay muted loop playsinline poster></video>
+                    </div>
+                    <div class="codingPic">
+                        <video src="img/toggling.mp4" class="codingPic" onclick="imageOpenHandler('image16')" preload autoplay muted loop playsinline poster></video>
+                    </div>
+                    <div class="codingPic">
+                        <img src="img/disassembled.png" class="codingPic" onclick="imageOpenHandler('image13')"></img>
+                    </div>
+                </div>
+                <div class="codingPicMainOne">
+                    <video src="img/leafsheep.mp4" class="codingPicMainOne" onclick="imageOpenHandler('image20')" preload autoplay muted loop playsinline poster></video>
                 </div>
             </div>
         </div>
@@ -286,50 +376,6 @@
                     </div>
                     <div class="codingPic">
                         <video src="img/dynamicStem.mp4" class="codingPic" onclick="imageOpenHandler('image12')" preload autoplay muted loop playsinline poster></video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aboutMeBoxContainer" >
-        <div class="aboutMeBox">
-            <div class="aboutMeTextVerticalCenterBox">
-                <div class="aboutMeTextHeader">
-                    2D Character Rigging
-                </div>
-                <div class="titleDivider">
-                    <img class="titleDividerStar" src="img/menuStar.png">
-                </div>
-                <div class="aboutMeText">
-                    Prior to my work in classes in 3D rigging, I had been personally interested in and taught myself 2D rigging.
-                    This particular model is one created for live face-tracking and lip sync.
-                </div>
-                <div class="aboutMeText">
-                    This model consists of over 100 separate pieces, each of which have ranges of motion defined by
-                    sets of keyframes (an earlier model is disassembled in the bottom right image). These keyframes are
-                    then evaluated based on facial data from the program VTube studio, and the model then reacts
-                    accordingly. As well as that, pendulum-based physics are applied after movement to create secondary motion.
-                </div>
-                <div class="aboutMeText">
-                    For example, each layer that makes up an eye has keyframes assigned for x, y, and z movement, as
-                    well as eyeOpen and eyeSmile. The xyz parameters adjust the position of each layer as the user turns their head, while the others deform its shape
-                    while the user blinks or smiles. In order to create a head with 180 degrees of movement, I iterated over
-                    several versions to create a design that would function ideally.
-                </div>
-            </div>
-            <div class="codingPicVerticalCenterBox">
-                <div class="codingPicMainOne">
-                    <video src="img/preview2DModel.mp4" class="codingPicMainOne" onclick="imageOpenHandler('image14')" preload autoplay muted loop playsinline poster></video>
-                </div>
-                <div class="miniCodingPicBox">
-                    <div class="codingPic">
-                        <video src="img/eyeTechFull.mp4" class="codingPic" onclick="imageOpenHandler('image15')" preload autoplay muted loop playsinline poster></video>
-                    </div>
-                    <div class="codingPic">
-                        <video src="img/toggling.mp4" class="codingPic" onclick="imageOpenHandler('image16')" preload autoplay muted loop playsinline poster></video>
-                    </div>
-                    <div class="codingPic">
-                        <img src="img/disassembled.png" class="codingPic" onclick="imageOpenHandler('image13')"></img>
                     </div>
                 </div>
             </div>
