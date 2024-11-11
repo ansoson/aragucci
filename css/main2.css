@@ -385,6 +385,47 @@ a {
     z-index: 1;
 }
 
+.nextPageButtonContainer{
+    display: flex;
+    justify-content: center;
+    width:100dvw;
+    padding-top: 5dvh;
+    justify-content: center;
+    font-size: 1.4em;
+    text-align: center;
+    /*font-family: "Ink Free";*/
+    font-family: monospace;
+}
+
+.nextPageButton{
+    max-width: 10dvh;
+    min-width:50px;
+    max-height: 10dvh;
+    min-height: 50px;
+    object-fit: fill;
+}
+
+.nextPageText{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nextPageArrow{
+    max-width: 10lvh;
+    min-width:50px;
+    max-height: 10lvh;
+    min-height: 50px;
+    display: inline-block;
+    opacity: 75%;
+}
+
+.nextPageArrow:hover {
+    cursor: pointer;
+}
+
 /* --------------------------------------------------- ABOUT ME -----------------------------------------------------*/
 
 .aboutMeBoxContainer {
