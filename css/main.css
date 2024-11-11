@@ -560,7 +560,7 @@ animation-name: closingAnimation;
 .imageOpenAnimation {
   animation-name: imagePopUp;
   }
-  
+
   @keyframes imagePopUp {
     0% {
     opacity: 0%;}
