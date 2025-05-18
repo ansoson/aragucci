@@ -1,238 +1,269 @@
-  //this manages animation for the menu stars
 
-var previousClick = '3';
+var currentPage = 1;
+var hasBeenClicked = [1,0,0,0];
+var slowDownThereBucko = false;
 
-  function handleMenuClick(input) {
+function handleMenuClick(input) {
 
-    this.document.getElementById('visibleFile3').classList.remove('appearingAnimationClass');
-
-    const Menu1 = this.document.getElementById('1');
-    const Menu2 = this.document.getElementById('2');
-    const Menu3 = this.document.getElementById('3');
-    const Menu4 = this.document.getElementById('4');
-    const Menu5 = this.document.getElementById('5');
-    const ClickedMenu = this.document.getElementById(input);
-
-    this.document.getElementById('menuStar1').classList.remove("starClicked");
-    this.document.getElementById('menuStarHovered1').classList.remove("hoveredClicked");
-    this.document.getElementById('menuWords1').classList.remove("wordsClicked");
-    this.document.getElementById('menuStarHovered1').classList.add("menuStarHoveredHovers");
-    this.document.getElementById('menuWords1').classList.add('menuWordsHovers');
-
-    this.document.getElementById('menuStar1').classList.remove("menuStarClicked");
-    this.document.getElementById('menuStarHovered1').classList.remove("menuStarHoveredClicked");
-    this.document.getElementById('menuWords1').classList.remove("menuWordsClicked");
-
-
-    this.document.getElementById('menuStar2').classList.remove("starClicked");
-    this.document.getElementById('menuStarHovered2').classList.remove("hoveredClicked");
-    this.document.getElementById('menuWords2').classList.remove("wordsClicked");
-    this.document.getElementById('menuStarHovered2').classList.add("menuStarHoveredHovers");
-    this.document.getElementById('menuWords2').classList.add('menuWordsHovers');
-
-    this.document.getElementById('menuStar2').classList.remove("menuStarClicked");
-    this.document.getElementById('menuStarHovered2').classList.remove("menuStarHoveredClicked");
-    this.document.getElementById('menuWords2').classList.remove("menuWordsClicked");
-
-
-    this.document.getElementById('menuStar3').classList.remove("starClicked");
-    this.document.getElementById('menuStarHovered3').classList.remove("hoveredClicked");
-    this.document.getElementById('menuWords3').classList.remove("wordsClicked");
-    this.document.getElementById('menuStar3').classList.add("menuStarHovers");
-    this.document.getElementById('menuStarHovered3').classList.add("menuStarHoveredHovers");
-    this.document.getElementById('menuWords3').classList.add('menuWordsHovers');
-
-    this.document.getElementById('menuStar3').classList.remove("menuStarClicked");
-    this.document.getElementById('menuStarHovered3').classList.remove("menuStarHoveredClicked");
-    this.document.getElementById('menuWords3').classList.remove("menuWordsClicked");
-
-
-    this.document.getElementById('menuStar4').classList.remove("starClicked");
-    this.document.getElementById('menuStarHovered4').classList.remove("hoveredClicked");
-    this.document.getElementById('menuWords4').classList.remove("wordsClicked");
-    this.document.getElementById('menuStarHovered4').classList.add("menuStarHoveredHovers");
-    this.document.getElementById('menuWords4').classList.add('menuWordsHovers');
-
-    this.document.getElementById('menuStar4').classList.remove("menuStarClicked");
-    this.document.getElementById('menuStarHovered4').classList.remove("menuStarHoveredClicked");
-    this.document.getElementById('menuWords4').classList.remove("menuWordsClicked");
-
-
-    this.document.getElementById('menuStar5').classList.remove("starClicked");
-    this.document.getElementById('menuStarHovered5').classList.remove("hoveredClicked");
-    this.document.getElementById('menuWords5').classList.remove("wordsClicked");
-    this.document.getElementById('menuStarHovered5').classList.add("menuStarHoveredHovers");
-    this.document.getElementById('menuWords5').classList.add('menuWordsHovers');
-
-    this.document.getElementById('menuStar5').classList.remove("menuStarClicked");
-    this.document.getElementById('menuStarHovered5').classList.remove("menuStarHoveredClicked");
-    this.document.getElementById('menuWords5').classList.remove("menuWordsClicked");
-  
-
-
-    
-    if (input == '1') {
-      this.document.getElementById('menuStar1').classList.add("starClicked");
-      this.document.getElementById('menuStarHovered1').classList.add("hoveredClicked");
-      this.document.getElementById('menuStarHovered1').classList.remove("menuStarHoveredHovers");
-      this.document.getElementById('menuWords1').classList.add("wordsClicked");
-      this.document.getElementById('menuWords1').classList.remove('menuWordsHovers');
-      this.document.getElementById('visibleFile1').classList.remove('fileToOffScreen1');
-      this.document.getElementById('visibleFile1').classList.add('fileFromOffScreen1');
-      
-    } else 
-    if (input == '2') {
-      this.document.getElementById('menuStar2').classList.add("starClicked");
-      this.document.getElementById('menuStarHovered2').classList.add("hoveredClicked");
-      this.document.getElementById('menuStarHovered2').classList.remove("menuStarHoveredHovers");
-      this.document.getElementById('menuWords2').classList.add("wordsClicked");
-      this.document.getElementById('menuWords2').classList.remove('menuWordsHovers');
-      this.document.getElementById('visibleFile2').classList.remove('fileToOffScreen2');
-      this.document.getElementById('visibleFile2').classList.add('fileFromOffScreen2');
-    } else 
-    if (input == '3') {
-      this.document.getElementById('menuStar3').classList.add("starClicked");
-      this.document.getElementById('menuStarHovered3').classList.add("hoveredClicked");
-      this.document.getElementById('menuStarHovered3').classList.remove("menuStarHoveredHovers");
-      this.document.getElementById('menuWords3').classList.add("wordsClicked");
-      this.document.getElementById('menuWords3').classList.remove('menuWordsHovers');
-      this.document.getElementById('visibleFile3').classList.remove('fileToOffScreen3');
-      this.document.getElementById('visibleFile3').classList.add('fileFromOffScreen3');
-    } else 
-    if (input == '4') {
-      this.document.getElementById('menuStar4').classList.add("starClicked");
-      this.document.getElementById('menuStarHovered4').classList.add("hoveredClicked");
-      this.document.getElementById('menuStarHovered4').classList.remove("menuStarHoveredHovers");
-      this.document.getElementById('menuWords4').classList.add("wordsClicked");
-      this.document.getElementById('menuWords4').classList.remove('menuWordsHovers');
-      this.document.getElementById('visibleFile4').classList.remove('fileToOffScreen4');
-      this.document.getElementById('visibleFile4').classList.add('fileFromOffScreen4');
-    } else 
-    if (input == '5') {
-      this.document.getElementById('menuStar5').classList.add("starClicked");
-      this.document.getElementById('menuStarHovered5').classList.add("hoveredClicked");
-      this.document.getElementById('menuStarHovered5').classList.remove("menuStarHoveredHovers");
-      this.document.getElementById('menuWords5').classList.add("wordsClicked");
-      this.document.getElementById('menuWords5').classList.remove('menuWordsHovers');
-      this.document.getElementById('visibleFile5').classList.remove('fileToOffScreen5');
-      this.document.getElementById('visibleFile5').classList.add('fileFromOffScreen5');
-    } 
-    
-    if (input == previousClick) {
-    } else {
-      if (previousClick == '1') {
-        this.document.getElementById('menuStar1').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered1').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords1').classList.add("menuWordsClicked");
-        this.document.getElementById('visibleFile1').classList.remove('fileFromOffScreen1');
-        this.document.getElementById('visibleFile1').classList.add('fileToOffScreen1');
-      } else 
-      if (previousClick == '2') {
-        this.document.getElementById('menuStar2').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered2').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords2').classList.add("menuWordsClicked");
-        this.document.getElementById('visibleFile2').classList.remove('fileFromOffScreen2');
-        this.document.getElementById('visibleFile2').classList.add('fileToOffScreen2');
-      } else 
-      if (previousClick == '3') {
-        this.document.getElementById('menuStar3').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered3').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords3').classList.add("menuWordsClicked");
-        this.document.getElementById('visibleFile3').classList.remove('fileFromOffScreen3');
-        this.document.getElementById('visibleFile3').classList.add('fileToOffScreen3');
-      } else 
-      if (previousClick == '4') {
-        this.document.getElementById('menuStar4').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered4').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords4').classList.add("menuWordsClicked");
-        this.document.getElementById('visibleFile4').classList.remove('fileFromOffScreen4');
-        this.document.getElementById('visibleFile4').classList.add('fileToOffScreen4');
-      } else 
-      if (previousClick == '5') {
-        this.document.getElementById('menuStar5').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered5').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords5').classList.add("menuWordsClicked");
-        this.document.getElementById('visibleFile5').classList.remove('fileFromOffScreen5');
-        this.document.getElementById('visibleFile5').classList.add('fileToOffScreen5');
-      } 
-      previousClick = input;
-
+    if (!slowDownThereBucko) {
+        slowDownThereBucko = true;
+        this.document.getElementById('leftSpacer').classList.remove("shiftingLeftAnim");
+        this.document.getElementById('leftSpacer').classList.add("shiftingLeftAnim");
+        this.document.getElementById('rightSpacer').classList.remove("shiftingRightAnim");
+        this.document.getElementById('rightSpacer').classList.add("shiftingRightAnim");
+        if (currentPage === 1){
+            this.document.getElementById('section 1').classList.remove("becomeRelevant");
+            this.document.getElementById('section 1').classList.add("fadeOutToIrrelevant");
+        }
+        if (currentPage === 2){
+            this.document.getElementById('section 2').classList.remove("becomeRelevant");
+            this.document.getElementById('section 2').classList.add("fadeOutToIrrelevant");
+        }
+        if (currentPage === 3){
+            this.document.getElementById('section 3').classList.remove("becomeRelevant");
+            this.document.getElementById('section 3').classList.add("fadeOutToIrrelevant");
+        }
+        if (currentPage === 4){
+            this.document.getElementById('section 4').classList.remove("becomeRelevant");
+            this.document.getElementById('section 4').classList.add("fadeOutToIrrelevant");
+        }
+        if (input === 1) {
+            if (currentPage === 4){
+                hasBeenClicked[3] = 1;
+                changeMenuStatus(1);
+            }
+        }
+        if (input === 2) {
+            if (currentPage === 3){
+                hasBeenClicked[2] = 1;
+                changeMenuStatus(1);
+            } else
+            if (currentPage === 4){
+                hasBeenClicked[3] = 1;
+                changeMenuStatus(2);
+            }
+        }
+        if (input === 3) {
+            if (currentPage === 2){
+                hasBeenClicked[1] = 1;
+                changeMenuStatus(1);
+            } else
+            if (currentPage === 3){
+                hasBeenClicked[2] = 1;
+                changeMenuStatus(2);
+            } else
+            if (currentPage === 4){
+                hasBeenClicked[3] = 1;
+                changeMenuStatus(3);
+            }
+        }
+        if (input === 4) {
+            if (currentPage === 1){
+                changeMenuStatus(2);
+            } else
+            if (currentPage === 2){
+                hasBeenClicked[1] = 1;
+                changeMenuStatus(3);
+            } else
+            if (currentPage === 3){
+                hasBeenClicked[2] = 1;
+                changeMenuStatus(4);
+            }
+        }
+        if (input === 5) {
+            if (currentPage === 1){
+                changeMenuStatus(3);
+            } else
+            if (currentPage === 2){
+                hasBeenClicked[1] = 1;
+                changeMenuStatus(4);
+            }
+        }
+        if (input === 6) {
+            if (currentPage === 1){
+                changeMenuStatus(4);
+            }
+        }
+        setTimeout(function() {
+            slowDownThereBucko = false;
+            this.document.getElementById('leftSpacer').classList.remove("shiftingLeftAnim");
+            this.document.getElementById('rightSpacer').classList.remove("shiftingRightAnim");
+        }, 2200); // 1000 milliseconds = 1 second
     }
 
-    };
+}
 
-  //this manages animation for the initial clasp button
-  function openingAnimation() {
+function changeMenuStatus(input) {
 
-    const FolderBot = this.document.getElementById('folderBottom');
-    const FolderTop = this.document.getElementById('folderTop');
-    const Clasp = this.document.getElementById('clasp');
-    const Menu = this.document.getElementById('topMenu');
-    const File = this.document.getElementById('fileContainer');
-    const Click = this.document.getElementById('clickEffect');
-    
-    Clasp.classList.add("upOffScreenAnimation");
-    FolderTop.classList.add("upOffScreenAnimationFolder");
-    FolderBot.classList.add("downOffScreenAnimation");
-    Menu.classList.add("appearingAnimationClass");
-    File.classList.add("appearingAnimationClass");
-    Click.classList.add("claspAnimationAnimation");
+    this.document.getElementById('titleStar').classList.add("shuffleAnim");
+    this.document.getElementById('titleText').classList.add("shuffleAnim2");
+    setTimeout(function() {
+        this.document.getElementById('titleStar').classList.remove("shuffleAnim");
+        this.document.getElementById('titleText').classList.remove("shuffleAnim2");
+    }, 2000); // 1000 milliseconds = 1 second
+    setTimeout(function() {
+    if (input === 1){
+        this.document.getElementById('section 2').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 3').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 4').classList.add("becomeIrrelevant");
+        setTimeout(function() {
+        this.document.getElementById('section 1').classList.remove("becomeIrrelevant");
+        }, 100); // 1000 milliseconds = 1 second
+        this.document.getElementById('star1').classList.add("becomeInvisible");
+        this.document.getElementById('star2').classList.add("becomeInvisible");
+        this.document.getElementById('star3').classList.add("becomeInvisible");
+        this.document.getElementById('star4').classList.remove("becomeInvisible");
+        this.document.getElementById('star5').classList.remove("becomeInvisible");
+        this.document.getElementById('star6').classList.remove("becomeInvisible");
+        currentPage = 1;
+        this.document.getElementById('section 1').classList.remove("fadeOutToIrrelevant");
+        this.document.getElementById('section 1').classList.add("becomeRelevant");
 
-    // this.document.getElementById('spinningStar').classList.remove('animatedClasp');
-    this.document.getElementById('spinningStar').classList.add('buttonSpin');
-
+        if (hasBeenClicked[1] === 1){
+            this.document.getElementById('star4').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star4').classList.add("unclicked");
+        }
+        if (hasBeenClicked[2] === 1){
+            this.document.getElementById('star5').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star5').classList.add("unclicked");
+        }
+        if (hasBeenClicked[3] === 1){
+            this.document.getElementById('star6').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star6').classList.add("unclicked");
+        }
+        document.getElementById("titleText").textContent = "About Me";
     }
+    if (input === 2){
 
+        this.document.getElementById('section 3').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 4').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 1').classList.add("becomeIrrelevant");
+        setTimeout(function() {
+            this.document.getElementById('section 2').classList.remove("becomeIrrelevant");
+        }, 100); // 1000 milliseconds = 1 second
 
-    function mouseOffMenuHandler(input) {
+        this.document.getElementById('star1').classList.add("becomeInvisible");
+        this.document.getElementById('star2').classList.add("becomeInvisible");
+        this.document.getElementById('star3').classList.remove("becomeInvisible");
+        this.document.getElementById('star4').classList.remove("becomeInvisible");
+        this.document.getElementById('star5').classList.remove("becomeInvisible");
+        this.document.getElementById('star6').classList.add("becomeInvisible");
+        currentPage = 2;
+        this.document.getElementById('section 2').classList.remove("fadeOutToIrrelevant");
+        this.document.getElementById('section 2').classList.add("becomeRelevant");
 
-      if (input !== previousClick)  
-      {
-      if (input == '1') {
-        this.document.getElementById('menuStar1').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered1').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords1').classList.add("menuWordsClicked");
-      } else 
-      if (input == '2') {
-        this.document.getElementById('menuStar2').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered2').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords2').classList.add("menuWordsClicked");
-      } else 
-      if (input == '3') {
-        this.document.getElementById('menuStar3').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered3').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords3').classList.add("menuWordsClicked");
-      } else 
-      if (input == '4') {
-        this.document.getElementById('menuStar4').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered4').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords4').classList.add("menuWordsClicked");
-      } else 
-      if (input == '5') {
-        this.document.getElementById('menuStar5').classList.add("menuStarClicked");
-        this.document.getElementById('menuStarHovered5').classList.add("menuStarHoveredClicked");
-        this.document.getElementById('menuWords5').classList.add("menuWordsClicked");
-      } 
+        if (hasBeenClicked[0] === 1){
+            this.document.getElementById('star3').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star3').classList.add("unclicked");
+        }
+        if (hasBeenClicked[2] === 1){
+            this.document.getElementById('star4').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star4').classList.add("unclicked");
+        }
+        if (hasBeenClicked[3] === 1){
+            this.document.getElementById('star5').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star5').classList.add("unclicked");
+        }
+        document.getElementById("titleText").textContent = "Coding/ Design";
     }
-  }
+    if (input === 3){
+        this.document.getElementById('section 2').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 4').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 1').classList.add("becomeIrrelevant");
+        setTimeout(function() {
+            this.document.getElementById('section 3').classList.remove("becomeIrrelevant");
+        }, 100); // 1000 milliseconds = 1 second
+
+        this.document.getElementById('star1').classList.add("becomeInvisible");
+        this.document.getElementById('star2').classList.remove("becomeInvisible");
+        this.document.getElementById('star3').classList.remove("becomeInvisible");
+        this.document.getElementById('star4').classList.remove("becomeInvisible");
+        this.document.getElementById('star5').classList.add("becomeInvisible");
+        this.document.getElementById('star6').classList.add("becomeInvisible");
+        currentPage = 3;
+        this.document.getElementById('section 3').classList.remove("fadeOutToIrrelevant");
+        this.document.getElementById('section 3').classList.add("becomeRelevant");
+
+        if (hasBeenClicked[0] === 1){
+            this.document.getElementById('star2').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star2').classList.add("unclicked");
+        }
+        if (hasBeenClicked[1] === 1){
+            this.document.getElementById('star3').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star3').classList.add("unclicked");
+        }
+        if (hasBeenClicked[3] === 1){
+            this.document.getElementById('star4').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star4').classList.add("unclicked");
+        }
+        document.getElementById("titleText").textContent = "TD/ Rigging";
+    }
+    if (input === 4){
+        this.document.getElementById('section 2').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 3').classList.add("becomeIrrelevant");
+        this.document.getElementById('section 1').classList.add("becomeIrrelevant");
+        setTimeout(function() {
+            this.document.getElementById('section 4').classList.remove("becomeIrrelevant");
+        }, 100); // 1000 milliseconds = 1 second
+
+        this.document.getElementById('star1').classList.remove("becomeInvisible");
+        this.document.getElementById('star2').classList.remove("becomeInvisible");
+        this.document.getElementById('star3').classList.remove("becomeInvisible");
+        this.document.getElementById('star4').classList.add("becomeInvisible");
+        this.document.getElementById('star5').classList.add("becomeInvisible");
+        this.document.getElementById('star6').classList.add("becomeInvisible");
+        currentPage = 4;
+
+        this.document.getElementById('section 4').classList.remove("fadeOutToIrrelevant");
+        this.document.getElementById('section 4').classList.add("becomeRelevant");
+
+        if (hasBeenClicked[0] === 1){
+            this.document.getElementById('star1').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star1').classList.add("unclicked");
+        }
+        if (hasBeenClicked[1] === 1){
+            this.document.getElementById('star2').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star2').classList.add("unclicked");
+        }
+        if (hasBeenClicked[2] === 1){
+            this.document.getElementById('star3').classList.remove("unclicked");
+        } else {
+            this.document.getElementById('star3').classList.add("unclicked");
+        }
+        document.getElementById("titleText").textContent = "Work Experience";
+    }
+    }, 1000); // 1000 milliseconds = 1 second
+
+}
 
 var openPage= "";
 var openImage= "";
 
-  function pageCloseHandler() {
+function pageCloseHandler() {
     this.document.getElementById('PageBackground').classList.remove("openAnimation");
     this.document.getElementById('PageBackground').classList.add("closeAnimation");
 
     this.document.getElementById(openPage).classList.remove("pageOpenAnimation");
     this.document.getElementById(openPage).classList.add("pageCloseAnimation");
 
-  }
+}
 
-  function pageOpenHandler(index) {
+function pageOpenHandler(index) {
     this.document.getElementById('PageBackground').scrollIntoView(
-      {
-        behavior: 'smooth'
-      }
+        {
+            behavior: 'smooth'
+        }
     );
 
     this.document.getElementById('PageBackground').classList.remove("closeAnimation");
@@ -243,13 +274,9 @@ var openImage= "";
 
     openPage = index;
     console.log(openPage)
-  }
+}
 
-  function doNothing() {
-
-  }
-
-  function imageOpenHandler(index) {
+function imageOpenHandler(index) {
     this.document.getElementById('imageBackground').classList.remove("closeAnimation");
     this.document.getElementById('imageBackground').classList.add("openAnimation");
 
@@ -257,13 +284,13 @@ var openImage= "";
     this.document.getElementById(index).classList.add("imageOpenAnimation");
 
     openImage = index;
-    console.log(openPage)
-  }
+    console.log("HELLO")
+}
 
-  function imageCloseHandler() {
+function imageCloseHandler() {
     this.document.getElementById('imageBackground').classList.remove("openAnimation");
     this.document.getElementById('imageBackground').classList.add("closeAnimation");
 
     this.document.getElementById(openImage).classList.remove("imageOpenAnimation");
     this.document.getElementById(openImage).classList.add("imageCloseAnimation");
-  }
+}
