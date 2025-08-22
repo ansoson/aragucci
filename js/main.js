@@ -294,3 +294,17 @@ function imageCloseHandler() {
     this.document.getElementById(openImage).classList.remove("imageOpenAnimation");
     this.document.getElementById(openImage).classList.add("imageCloseAnimation");
 }
+
+addEventListener("input", checkPassword);
+
+function checkPassword(e) {
+    if (this.document.getElementById("passwordBox").value === "machler") {
+        bonusStuffActivate();
+    }
+}
+
+function bonusStuffActivate(e) {
+    this.document.getElementById("vC").classList.remove("passProtected");
+    this.document.getElementById("vC").classList.add("unPass");
+    console.log("bingbongerino");
+}
