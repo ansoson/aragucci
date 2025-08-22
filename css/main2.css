@@ -592,7 +592,7 @@ a {
     max-height: 0;
     position: absolute;
     left: -100vw;
-    top: 0;
+    top: -10000px;
 }
 
 .unPass {
